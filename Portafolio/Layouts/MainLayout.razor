@@ -1,0 +1,55 @@
+@inherits LayoutComponentBase
+@inject HomeContentService HomeContentService
+
+<div class="app-shell">
+    <button class="mobile-nav-toggle" @onclick="ToggleNav" aria-expanded="@IsMobileNavOpen" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <aside class="side-rail @(IsMobileNavOpen ? "open" : string.Empty)">
+        <div class="brand-block">
+            <p class="brand-name">Hugo Palafox</p>
+            <p class="brand-role">Industrial Systems Architect</p>
+        </div>
+        <nav>
+            <ul>
+                @foreach (var item in NavItems)
+                {
+                    <li @key="item.Href">
+                        <NavLink href="@item.Href" Match="@(item.Href == "/" ? NavLinkMatch.All : NavLinkMatch.Prefix)" @onclick="CloseNav">
+                            <Icon Name="@item.IconName" Class="nav-icon" />
+                            <span>@item.Title</span>
+                        </NavLink>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="content-shell">
+        @Body
+    </main>
+</div>
+
+@code {
+    private bool IsMobileNavOpen { get; set; }
+
+    private IReadOnlyList<NavItem> NavItems { get; set; } = Array.Empty<NavItem>();
+
+    protected override void OnInitialized()
+    {
+        NavItems = HomeContentService.GetNavigationItems();
+    }
+
+    private void ToggleNav()
+    {
+        IsMobileNavOpen = !IsMobileNavOpen;
+    }
+
+    private void CloseNav()
+    {
+        IsMobileNavOpen = false;
+    }
+}

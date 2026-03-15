@@ -1,0 +1,23 @@
+@page "/skills"
+@inject SkillService SkillService
+
+<PageTitle>Skills | Hugo Palafox</PageTitle>
+
+<SectionContainer>
+    <PageHeader Eyebrow="Skills" Title="Technical Capability Map" Description="Organized by engineering domain for fast signal on depth and integration range." />
+    <div class="grid grid-2">
+        @foreach (var category in SkillCategories)
+        {
+            <SkillsSection Category="@category" @key="category.Name" />
+        }
+    </div>
+</SectionContainer>
+
+@code {
+    private IReadOnlyList<SkillCategory> SkillCategories { get; set; } = Array.Empty<SkillCategory>();
+
+    protected override void OnInitialized()
+    {
+        SkillCategories = SkillService.GetSkillCategories();
+    }
+}

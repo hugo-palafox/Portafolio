@@ -1,0 +1,12 @@
+<article class="card pillar-card">
+    <div class="pillar-icon-shell">
+        <Icon Name="@Pillar.IconName" Class="pillar-icon" />
+    </div>
+    <h3>@Pillar.Title</h3>
+    <p>@Pillar.Description</p>
+</article>
+
+@code {
+    [Parameter]
+    public CapabilityPillar Pillar { get; set; } = new();
+}

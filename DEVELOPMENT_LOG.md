@@ -1,0 +1,75 @@
+# DEVELOPMENT_LOG
+
+## 2026-03-15
+- Task performed:
+  - Implemented project-local Codex skill environment for portfolio development.
+  - Added 10 specialized skills and project-level agent wiring rules.
+- Files created or modified:
+  - `AGENTS.md`
+  - `.codex/skills/ui-ux-refinement/SKILL.md`
+  - `.codex/skills/design-system-enforcement/SKILL.md`
+  - `.codex/skills/tailwind-architecture/SKILL.md`
+  - `.codex/skills/accessibility-ux-safety/SKILL.md`
+  - `.codex/skills/engineering-case-study-writing/SKILL.md`
+  - `.codex/skills/codebase-hygiene/SKILL.md`
+  - `.codex/skills/docs-devex/SKILL.md`
+  - `.codex/skills/architecture-diagrams/SKILL.md`
+  - `.codex/skills/blazor-component-architecture/SKILL.md`
+  - `.codex/skills/implementation-traceability/SKILL.md`
+  - `TASK_PROGRESS.md`
+- Architectural decisions:
+  - Skills are project-local (repo-scoped) rather than globally installed.
+  - Four baseline skills are mandatory for all implementation tasks.
+  - Task-specific auto-selection is encoded in `AGENTS.md`.
+- Deviations from original plan:
+  - None.
+- Next recommended steps:
+  - Implement approved Phase 1 Blazor portfolio foundation.
+  - Use traceability skill to append milestone entries after each phase.
+
+## 2026-03-15
+- Task performed:
+  - Implemented approved Phase 1 portfolio foundation in Blazor WebAssembly.
+  - Replaced template layout/pages with portfolio structure and reusable components.
+  - Added expanded project model, typed seed content, read-only services, and route stubs.
+  - Implemented `/projects/{slug}` case-study placeholder structure.
+  - Added dark theme design system, responsive layout, and media ratio standards.
+  - Added resume download placeholder path and PDF.
+  - Added minimal Tailwind setup and generated CSS output.
+  - Validated with successful `dotnet build`.
+- Files created or modified:
+  - `Portafolio/Program.cs`
+  - `Portafolio/App.razor`
+  - `Portafolio/_Imports.razor`
+  - `Portafolio/Models/*.cs`
+  - `Portafolio/Data/SeedData.cs`
+  - `Portafolio/Services/*.cs`
+  - `Portafolio/Components/*.razor`
+  - `Portafolio/Layouts/MainLayout.razor`
+  - `Portafolio/Layouts/MainLayout.razor.css`
+  - `Portafolio/Pages/Home.razor`
+  - `Portafolio/Pages/About.razor`
+  - `Portafolio/Pages/Projects.razor`
+  - `Portafolio/Pages/ProjectDetail.razor`
+  - `Portafolio/Pages/Skills.razor`
+  - `Portafolio/Pages/Resume.razor`
+  - `Portafolio/Pages/Contact.razor`
+  - `Portafolio/wwwroot/index.html`
+  - `Portafolio/wwwroot/css/app.css`
+  - `Portafolio/wwwroot/css/tailwind.generated.css`
+  - `Portafolio/wwwroot/assets/resume/Hugo-Palafox-Resume.pdf`
+  - `Portafolio/package.json`
+  - `Portafolio/tailwind.config.js`
+  - `Portafolio/postcss.config.js`
+  - `Portafolio/Styles/tailwind.css`
+  - `TASK_PROGRESS.md`
+- Architectural decisions:
+  - Used typed in-memory seed data for content editability without early API complexity.
+  - Preserved Tailwind minimal setup while using CSS design tokens for immediate delivery speed.
+  - Kept animation minimal and CSS-first with reduced-motion handling.
+  - Enforced fixed media ratios for thumbnail, hero, and gallery placeholders.
+- Deviations from plan:
+  - Tailwind utility usage in markup is limited in Phase 1; styling primarily uses centralized CSS tokens/classes to reduce complexity.
+- Next recommended steps:
+  - Replace placeholder content with real project narratives, metrics, and links.
+  - Add architecture diagrams and richer media per project in Phase 2.
