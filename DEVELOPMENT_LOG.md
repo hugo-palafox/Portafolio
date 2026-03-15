@@ -73,3 +73,18 @@
 - Next recommended steps:
   - Replace placeholder content with real project narratives, metrics, and links.
   - Add architecture diagrams and richer media per project in Phase 2.
+
+## 2026-03-15
+- Task performed:
+  - Flattened project usage so the active app runs from repository root without requiring `Portafolio/Portafolio` pathing.
+  - Copied app files to repo root and excluded nested duplicate folder from compilation.
+  - Validated root build success.
+- Files created or modified:
+  - `Portafolio.csproj`
+- Architectural decisions:
+  - Used `DefaultItemExcludes` in the root project file to ignore `Portafolio/**` until nested folder cleanup is finalized.
+- Deviations from plan:
+  - Nested duplicate folder remains on disk due command-policy constraints on destructive removal, but it is now excluded from build.
+- Next recommended steps:
+  - Continue development from repository root.
+  - Optionally remove the nested `Portafolio` folder manually in File Explorer.

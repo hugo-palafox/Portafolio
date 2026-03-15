@@ -1,0 +1,23 @@
+@* Project card keeps a stable 16:9 media area to avoid layout shifting across grids. *@
+<article class="card project-card">
+    <div class="media media-16x9">
+        <div class="media-placeholder">
+            <span>@Project.Title</span>
+        </div>
+    </div>
+    <div class="project-meta">
+        <p class="eyebrow">@Project.Category</p>
+        <h3>@Project.Title</h3>
+        <p>@Project.ShortSummary</p>
+        <TagList Tags="@Project.Tags" />
+        <a class="inline-link" href="@($"/projects/{Project.Slug}")">
+            View case study
+            <Icon Name="arrow-right" Class="icon-inline" />
+        </a>
+    </div>
+</article>
+
+@code {
+    [Parameter]
+    public Project Project { get; set; } = new();
+}

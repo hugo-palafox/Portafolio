@@ -1,0 +1,24 @@
+@if (Download)
+{
+    <a class="@ButtonClass" href="@Href" download>@Text</a>
+}
+else
+{
+    <a class="@ButtonClass" href="@Href">@Text</a>
+}
+
+@code {
+    [Parameter]
+    public string Href { get; set; } = "/";
+
+    [Parameter]
+    public string Text { get; set; } = string.Empty;
+
+    [Parameter]
+    public bool Secondary { get; set; }
+
+    [Parameter]
+    public bool Download { get; set; }
+
+    private string ButtonClass => Secondary ? "btn btn-secondary" : "btn btn-primary";
+}

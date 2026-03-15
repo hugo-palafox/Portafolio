@@ -1,0 +1,19 @@
+<header class="page-header">
+    <p class="eyebrow">@Eyebrow</p>
+    <h1>@Title</h1>
+    @if (!string.IsNullOrWhiteSpace(Description))
+    {
+        <p class="lead">@Description</p>
+    }
+</header>
+
+@code {
+    [Parameter]
+    public string Eyebrow { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Title { get; set; } = string.Empty;
+
+    [Parameter]
+    public string Description { get; set; } = string.Empty;
+}

@@ -1,0 +1,14 @@
+<article class="card skill-section">
+    <h3>@Category.Name</h3>
+    <ul>
+        @foreach (var skill in Category.Skills)
+        {
+            <li @key="skill">@skill</li>
+        }
+    </ul>
+</article>
+
+@code {
+    [Parameter]
+    public SkillCategory Category { get; set; } = new();
+}

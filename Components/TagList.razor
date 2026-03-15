@@ -1,0 +1,14 @@
+@if (Tags.Any())
+{
+    <ul class="tag-list" aria-label="Tags">
+        @foreach (var tag in Tags)
+        {
+            <li class="tag" @key="tag">@tag</li>
+        }
+    </ul>
+}
+
+@code {
+    [Parameter]
+    public IReadOnlyList<string> Tags { get; set; } = Array.Empty<string>();
+}

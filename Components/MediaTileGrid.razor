@@ -1,0 +1,15 @@
+<div class="media-grid">
+    @foreach (var item in Items)
+    {
+        <div class="media media-tile" @key="item">
+            <div class="media-placeholder">
+                <span>@item</span>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public IReadOnlyList<string> Items { get; set; } = Array.Empty<string>();
+}
