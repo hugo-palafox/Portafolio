@@ -6,24 +6,34 @@
 
 <SectionContainer>
     <div class="hero-grid">
-        <div>
+        <div class="hero-copy">
             <p class="eyebrow">Engineering Portfolio</p>
             <h1>@HomeContent.Name</h1>
             <h2 class="hero-headline">@HomeContent.Headline</h2>
             <p class="lead">@HomeContent.Subheadline</p>
-            <p>@HomeContent.Description</p>
+            <p class="hero-description">@HomeContent.Description</p>
             <div class="hero-actions">
                 <ButtonLink Href="/projects" Text="View Projects" />
                 <ButtonLink Href="/assets/resume/Hugo-Palafox-Resume.pdf" Text="Download Resume" Secondary="true" Download="true" />
                 <ButtonLink Href="/contact" Text="Contact" Secondary="true" />
             </div>
         </div>
-        <div class="media media-hero">
-            <div class="media-placeholder">
-                <span>Architecture Snapshot Placeholder</span>
+        <div class="media media-hero hero-visual">
+            <div class="hero-visual-inner">
+                <p class="hero-visual-title">System Architecture Snapshot</p>
+                <div class="hero-visual-band">
+                    <span>Cell Layer</span>
+                </div>
+                <div class="hero-visual-band">
+                    <span>Edge Layer</span>
+                </div>
+                <div class="hero-visual-band">
+                    <span>Platform Layer</span>
+                </div>
             </div>
         </div>
     </div>
+    <div class="hero-divider" aria-hidden="true"></div>
 </SectionContainer>
 
 <SectionContainer>

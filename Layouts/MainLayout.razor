@@ -2,24 +2,36 @@
 @inject HomeContentService HomeContentService
 
 <div class="app-shell">
-    <button class="mobile-nav-toggle" @onclick="ToggleNav" aria-expanded="@IsMobileNavOpen" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <header class="top-nav">
+        <div class="top-nav-inner">
+            <a class="brand-link" href="/">Hugo Palafox</a>
 
-    <aside class="side-rail @(IsMobileNavOpen ? "open" : string.Empty)">
-        <div class="brand-block">
-            <p class="brand-name">Hugo Palafox</p>
-            <p class="brand-role">Industrial Systems Architect</p>
+            <button class="mobile-menu-button" @onclick="ToggleNav" aria-expanded="@IsMobileNavOpen" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="top-links" aria-label="Primary">
+                @foreach (var item in NavItems)
+                {
+                    <NavLink class="top-link" href="@item.Href" Match="@(item.Href == "/" ? NavLinkMatch.All : NavLinkMatch.Prefix)">
+                        @item.Title
+                    </NavLink>
+                }
+            </nav>
         </div>
-        <nav>
-            <ul>
+    </header>
+
+    <div class="drawer-overlay @(IsMobileNavOpen ? "open" : string.Empty)" @onclick="CloseNav"></div>
+    <aside class="mobile-drawer @(IsMobileNavOpen ? "open" : string.Empty)">
+        <nav aria-label="Mobile navigation">
+            <ul class="drawer-links">
                 @foreach (var item in NavItems)
                 {
                     <li @key="item.Href">
-                        <NavLink href="@item.Href" Match="@(item.Href == "/" ? NavLinkMatch.All : NavLinkMatch.Prefix)" @onclick="CloseNav">
-                            <Icon Name="@item.IconName" Class="nav-icon" />
+                        <NavLink class="drawer-link" href="@item.Href" Match="@(item.Href == "/" ? NavLinkMatch.All : NavLinkMatch.Prefix)" @onclick="CloseNav">
+                            <Icon Name="@item.IconName" Class="drawer-icon" />
                             <span>@item.Title</span>
                         </NavLink>
                     </li>

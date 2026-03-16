@@ -28,6 +28,14 @@
   - minimal Tailwind pipeline (`npm install`, `npm run build:css`)
   - successful `dotnet build`
 - Flattened active project to repository root path and excluded nested duplicate folder from compilation.
+- Added repository `.gitignore` for .NET/Node/IDE generated artifacts.
+- Untracked previously committed generated files from:
+  - `bin/`
+  - `obj/`
+  - `node_modules/`
+  - `Portafolio/bin/`
+  - `Portafolio/obj/`
+  - `Portafolio/node_modules/`
 
 ## In Progress
 - None.
@@ -36,3 +44,4 @@
 - Customize placeholder portfolio content with your real case-study details and resume.
 - Phase 2: deepen projects listing/detail content and add architecture diagrams per project.
 - Optional housekeeping: manually delete `C:\Users\hugod\source\repos\Portafolio\Portafolio` folder.
+- Commit the repository hygiene cleanup so generated artifacts stop appearing in `git status`.

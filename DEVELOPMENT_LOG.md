@@ -88,3 +88,88 @@
 - Next recommended steps:
   - Continue development from repository root.
   - Optionally remove the nested `Portafolio` folder manually in File Explorer.
+
+## 2026-03-15
+- Task performed:
+  - Refactored left navigation from large dashboard panel behavior to compact premium rail styling.
+  - Adjusted width, identity block scale, nav card density, icon sizing, and border softness.
+  - Verified successful build.
+- Files created or modified:
+  - `Layouts/MainLayout.razor`
+  - `Layouts/MainLayout.razor.css`
+- Architectural decisions:
+  - Kept existing dark theme language while reducing sidebar visual dominance versus hero content.
+  - Used fixed icon container bounds to stabilize nav item proportions.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Review in browser for final micro-adjustments to spacing at desktop breakpoints.
+
+## 2026-03-15
+- Task performed:
+  - Applied restrained hero polish pass focused on proportion, readability, and visual rhythm.
+  - Slightly widened desktop hero text column and constrained reading measure.
+  - Replaced generic hero placeholder text with a subtle technical layer placeholder.
+  - Added a low-contrast hero-to-capabilities divider.
+  - Synced changes across root and nested project copies.
+- Files created or modified:
+  - `Pages/Home.razor`
+  - `wwwroot/css/app.css`
+- Architectural decisions:
+  - Kept existing layout identity and section composition; no redesign.
+  - Used simple CSS-only visual cues to avoid introducing heavy motifs.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Review on desktop/tablet and adjust micro-spacing only if needed.
+
+## 2026-03-16
+- Task performed:
+  - Cleaned duplicate project structure that caused conflicting layout/CSS edits.
+  - Removed nested app folder and legacy empty `Layout` folder.
+  - Restored single-source project file configuration.
+- Files created or modified:
+  - `Portafolio.csproj`
+- Architectural decisions:
+  - Keep one canonical app root at `C:\Users\hugod\source\repos\Portafolio`.
+  - Keep only `Layouts/` (plural) for layout components.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Continue all UI edits in root paths only.
+
+## 2026-03-16
+- Task performed:
+  - Replaced permanent left sidebar with hybrid navigation:
+    - slim desktop top navigation
+    - mobile hamburger + slide-out drawer
+  - Removed rail/grid-offset layout behavior from `MainLayout`.
+  - Kept existing navigation items and dark design language.
+- Files created or modified:
+  - `Layouts/MainLayout.razor`
+  - `Layouts/MainLayout.razor.css`
+- Architectural decisions:
+  - Header kept intentionally slim and low-contrast to avoid competing with hero content.
+  - Mobile drawer uses icon + label rows with restrained interaction styling.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Review top-nav spacing and link density on wide desktop for final polish.
+
+## 2026-03-15
+- Task performed:
+  - Performed repository hygiene cleanup to reduce noisy Git changes from generated files.
+  - Added a root `.gitignore` for .NET build outputs, Node dependencies, IDE files, OS artifacts, and logs.
+  - Untracked previously committed generated artifacts under `bin/`, `obj/`, and `node_modules/` (root and nested `Portafolio/`).
+- Files created or modified:
+  - `.gitignore`
+  - `DEVELOPMENT_LOG.md`
+  - `TASK_PROGRESS.md`
+- Architectural decisions:
+  - Keep generated artifacts out of version control and track only source/config assets.
+  - Maintain one repo-level `.gitignore` so both root and nested legacy folders follow the same hygiene rules.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Commit the cleanup snapshot (`.gitignore` + cached file removals) to finalize repository state.
+  - Continue feature work with a significantly smaller and stable `git status` output.
