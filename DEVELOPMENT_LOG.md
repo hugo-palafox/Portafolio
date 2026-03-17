@@ -156,6 +156,42 @@
 - Next recommended steps:
   - Review top-nav spacing and link density on wide desktop for final polish.
 
+## 2026-03-16
+- Task performed:
+  - Integrated user-provided resume and project media assets from `resources/`.
+  - Added a new case study project entry for ultrasonic welding automation retrofit with dual-zone robot architecture.
+- Files created or modified:
+  - `wwwroot/assets/resume/Hugo-Palafox-Resume.pdf`
+  - `wwwroot/images/projects/dual-zone-robot-welding-cell.jpg`
+  - `wwwroot/images/projects/robot-welding-cell-1.jpg`
+  - `wwwroot/images/projects/robot-welding-cell-2.jpg`
+  - `wwwroot/images/projects/robot-welding-cell-4.jpg`
+  - `wwwroot/images/projects/Iiot-deployed.jpg`
+  - `wwwroot/images/projects/iiot-screenshoot.jpg`
+  - `Data/SeedData.cs`
+- Architectural decisions:
+  - Kept existing resume URL contract (`/assets/resume/Hugo-Palafox-Resume.pdf`) and replaced the placeholder file with the real resume.
+  - Added new project through typed seed data to keep content management consistent with current architecture.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Add a second project entry for the IIoT images if those are a separate case study.
+
+## 2026-03-16
+- Task performed:
+  - Bound real media assets to the ultrasonic welding case study detail view.
+  - Updated case-study hero media and gallery rendering from placeholders to actual images.
+- Files created or modified:
+  - `Pages/ProjectDetail.razor`
+  - `Components/MediaTileGrid.razor`
+  - `wwwroot/css/app.css`
+- Architectural decisions:
+  - Keep media rendering generic so all project case studies can display real images when paths are present.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Optionally add image captions/alt text metadata to `Project` model for richer case-study accessibility.
+
 ## 2026-03-15
 - Task performed:
   - Performed repository hygiene cleanup to reduce noisy Git changes from generated files.
@@ -173,3 +209,26 @@
 - Next recommended steps:
   - Commit the cleanup snapshot (`.gitignore` + cached file removals) to finalize repository state.
   - Continue feature work with a significantly smaller and stable `git status` output.
+
+## 2026-03-17
+- Task performed:
+  - Updated EOAT project media for Home card and case-study gallery.
+  - Implemented click-to-open full image behavior on case-study gallery tiles.
+- Files created or modified:
+  - Data/SeedData.cs
+  - Components/MediaTileGrid.razor
+  - wwwroot/css/app.css
+  - wwwroot/images/projects/EOAT-1-CAD.png
+  - wwwroot/images/projects/EOAT-1.png
+  - wwwroot/images/projects/EOAT-2-CAD.png
+  - wwwroot/images/projects/EOAT-2.png
+  - wwwroot/images/projects/Reachability-test_0.png
+  - wwwroot/images/projects/Reachability-test_1.png
+  - wwwroot/images/projects/Reachability-test_3.png
+- Architectural decisions:
+  - Kept image data source in SeedData so Home and Project Detail remain synchronized from one project model entry.
+  - Used a lightweight Blazor modal in MediaTileGrid to avoid extra JS dependencies.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Add per-image captions/alt metadata in the project model if you want richer case-study storytelling.

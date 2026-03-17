@@ -1,9 +1,7 @@
 @* Project card keeps a stable 16:9 media area to avoid layout shifting across grids. *@
 <article class="card project-card">
     <div class="media media-16x9">
-        <div class="media-placeholder">
-            <span>@Project.Title</span>
-        </div>
+        <img class="media-image" src="@Project.HeroImage" alt="@($"{Project.Title} project image")" loading="lazy" />
     </div>
     <div class="project-meta">
         <p class="eyebrow">@Project.Category</p>

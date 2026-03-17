@@ -15,9 +15,7 @@ else
     <SectionContainer>
         <PageHeader Eyebrow="@Project.Category" Title="@Project.Title" Description="@Project.ShortSummary" />
         <div class="media media-hero">
-            <div class="media-placeholder">
-                <span>Hero Media Placeholder</span>
-            </div>
+            <img class="media-image" src="@Project.HeroImage" alt="@($"{Project.Title} hero image")" />
         </div>
     </SectionContainer>
 
@@ -38,7 +36,7 @@ else
                 <TagList Tags="@Project.TechStack" />
                 <h2>Outcome / Impact</h2>
                 <p>@Project.Outcome</p>
-                <h2>Media Placeholders</h2>
+                <h2>Media</h2>
                 <MediaTileGrid Items="@Project.GalleryImages" />
                 <h2>Lessons Learned</h2>
                 <p>@Project.LessonsLearned</p>
