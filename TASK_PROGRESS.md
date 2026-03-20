@@ -112,3 +112,17 @@
 - Add architecture diagram assets for projects that now use the structured media block layout.
 - Review and curate final tag taxonomy for consistent portfolio storytelling across all cards.
 - Commit the current Phase 2 content + media updates.
+- Refactored Resume page into preview-and-download experience:
+  - updated resume page header copy to `Resume Preview & Download`
+  - removed redundant summary/timeline narrative sections
+  - added compact CTA row (`Download Resume`, `Contact`)
+  - added inline PDF preview for `/assets/resume/Hugo-Palafox-Resume.pdf`
+  - added always-visible fallback note with direct PDF link
+  - added minimal resume-specific responsive styles
+  - successful `dotnet build -c Release` validation
+- Refined Resume page layout to improve PDF preview prominence:
+  - added internal preview heading and support copy
+  - introduced centered preview stage wrapper
+  - substantially increased preview height for better document-first hierarchy
+  - kept existing CTA behavior, PDF path, and fallback note semantics
+  - successful `dotnet build -c Release` validation

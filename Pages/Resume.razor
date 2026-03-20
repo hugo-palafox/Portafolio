@@ -3,18 +3,28 @@
 <PageTitle>Resume | Hugo Palafox</PageTitle>
 
 <SectionContainer>
-    <PageHeader Eyebrow="Resume" Title="Professional Experience and Delivery Scope" Description="Summary timeline focused on systems architecture, controls integration, and production deployment execution." />
-    <div class="content-grid">
-        <article class="card prose">
-            <h2>Professional Summary</h2>
-            <p>Architect and technical lead for industrial automation programs integrating robotics, PLC controls, embedded systems, vision, and software platforms.</p>
-            <h2>Experience Timeline</h2>
-            <ul>
-                <li><strong>Industrial Systems Architect</strong> - Led multi-domain automation architecture and commissioning strategy.</li>
-                <li><strong>Automation Controls Engineer</strong> - Delivered PLC/robot integration and machine sequencing frameworks.</li>
-                <li><strong>Embedded and Software Integration Engineer</strong> - Built OT-IT interfaces and edge deployment workflows.</li>
-            </ul>
-            <ButtonLink Href="/assets/resume/Hugo-Palafox-Resume.pdf" Text="Download Resume" Download="true" />
-        </article>
+    <PageHeader Eyebrow="Resume" Title="Resume Preview & Download" Description="Review my resume directly below or download the full PDF for detailed experience, technical scope, and project delivery history." />
+    <div class="resume-page-shell">
+        <div class="card resume-preview-card">
+            <div class="resume-cta-row">
+                <ButtonLink Href="/assets/resume/Hugo-Palafox-Resume.pdf" Text="Download Resume" Download="true" />
+                <ButtonLink Href="/contact" Text="Contact" Secondary="true" />
+            </div>
+            <header class="resume-preview-header">
+                <h2 class="resume-preview-title">Resume PDF</h2>
+                <p class="resume-preview-support">Preview the document inline for a quick review. Download the PDF for full-resolution viewing and printing.</p>
+            </header>
+            <div class="resume-preview-stage">
+                <iframe
+                    class="resume-preview-frame"
+                    src="/assets/resume/Hugo-Palafox-Resume.pdf"
+                    title="Hugo Palafox Resume PDF Preview">
+                </iframe>
+            </div>
+            <p class="resume-fallback-note">
+                If the preview does not load in your browser,
+                <a href="/assets/resume/Hugo-Palafox-Resume.pdf">download the PDF directly.</a>
+            </p>
+        </div>
     </div>
 </SectionContainer>

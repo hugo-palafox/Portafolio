@@ -501,3 +501,44 @@
   - None.
 - Next recommended steps:
   - Optionally add a concise “Core Domains” list if you want About to be more scannable on mobile.
+
+## 2026-03-20
+- Task performed:
+  - Refactored Resume page from text-heavy narrative sections into a concise Resume Preview & Download experience.
+  - Replaced header copy with resume-preview focused title and description.
+  - Removed redundant professional summary/timeline sections.
+  - Added compact CTA row with `Download Resume` and `Contact`.
+  - Added embedded inline resume preview using existing PDF asset path.
+  - Added always-visible fallback note with direct PDF link for browsers that do not render inline previews.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Resume.razor`
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Used `iframe` preview for simple, maintainable cross-browser behavior without added dependencies.
+  - Added minimal resume-specific CSS classes only (`resume-page-shell`, `resume-cta-row`, `resume-preview-card`, `resume-preview-frame`, `resume-fallback-note`).
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Optional: verify inline preview behavior in Safari/Firefox and adjust fallback copy only if needed.
+
+## 2026-03-20
+- Task performed:
+  - Refined Resume page layout hierarchy to increase PDF preview dominance and reduce perceived empty space.
+  - Added internal resume preview header (`Resume PDF`) and supporting guidance copy.
+  - Added centered preview stage wrapper and increased preview area height for stronger document-first emphasis.
+  - Preserved existing header copy, CTA behavior, resume asset path, and fallback note behavior.
+  - Kept implementation minimal and style-consistent with current portfolio card patterns.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Resume.razor`
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Retained `iframe` rendering (no switch to `object`) because behavior is stable and accessible with current fallback.
+  - Extended resume-specific styles only where needed (`resume-preview-header`, `resume-preview-title`, `resume-preview-support`, `resume-preview-stage`).
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Optional: tune desktop preview height if your preferred viewport is ultra-wide and needs less vertical scroll.
