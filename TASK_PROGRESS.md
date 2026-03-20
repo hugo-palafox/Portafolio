@@ -126,3 +126,20 @@
   - substantially increased preview height for better document-first hierarchy
   - kept existing CTA behavior, PDF path, and fallback note semantics
   - successful `dotnet build -c Release` validation
+- Refactored Contact page into a professional inquiry surface:
+  - updated header copy for professional automation/systems conversation context
+  - removed placeholder form wording
+  - kept clear contact channels with consistent LinkedIn URL and text
+  - added structured inquiry form with optional company field
+  - added disabled non-live submit CTA (`Send Message (Coming soon)`) and professional response note
+  - preserved frontend-only behavior (no backend/email integration)
+  - added minimal contact-specific readability styles
+  - successful `dotnet build -c Release` validation
+- Fixed Home visibility for two new industrial software projects by setting their `Featured` flags to `true` in seed data.
+- Validated with successful `dotnet build -c Release`.
+- Audited and corrected default share-preview metadata to grounded positioning:
+  - removed "Industrial Systems Architect" from default/share title contexts
+  - set site-level and Home title to `Hugo Palafox | Robotics & Automation Systems Engineer`
+  - standardized default/meta Open Graph description to realistic portfolio wording
+  - build validated with `dotnet build -c Release`
+- Added GitHub channel to Contact page (`github.com/hugo-palafox`) and validated build success.

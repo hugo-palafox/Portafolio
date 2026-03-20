@@ -542,3 +542,74 @@
   - None.
 - Next recommended steps:
   - Optional: tune desktop preview height if your preferred viewport is ultra-wide and needs less vertical scroll.
+
+## 2026-03-20
+- Task performed:
+  - Refactored Contact page from placeholder wording to a professional inquiry surface.
+  - Updated page header copy to emphasize professional automation and systems conversations.
+  - Kept contact channels and aligned LinkedIn href/text consistency.
+  - Added recruiter/networking/technical discussion support line above form.
+  - Replaced placeholder form with structured inquiry fields (`Name`, `Email`, `Company / Organization (optional)`, `Message`).
+  - Added disabled non-live submit button (`Send Message (Coming soon)`) and professional expectation note.
+  - Kept behavior frontend-only with no backend/API/email delivery integration.
+  - Added minimal contact-specific CSS for readability (`contact-support-line`, `contact-form-note`).
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Contact.razor`
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Selected disabled button state as phase-0 delivery behavior to clearly communicate non-live submission.
+  - Reused existing `card`, `content-grid`, and `contact-form` patterns to preserve visual consistency.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Add `/api/contact` integration in a future phase when delivery and spam-control requirements are defined.
+
+## 2026-03-20
+- Task performed:
+  - Fixed Home page missing project visibility for two newly added case studies.
+  - Updated `Featured` flags to include:
+    - Leak Test System Integration with Barcode, Serial Control, and API
+    - Scale, Barcode, and API Integration for Manufacturing Workflow
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Data/SeedData.cs`
+- Architectural decisions:
+  - Home page continues to source cards from `GetFeaturedProjects()`; visibility controlled through per-project `Featured` flag.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - If Home becomes too dense, introduce a featured-card cap and move overflow to `/projects`.
+
+## 2026-03-20
+- Task performed:
+  - Audited portfolio title/share metadata surfaces and removed unrealistic use of the "Architect" title from default/share contexts.
+  - Updated site-level and Home page title to grounded professional positioning (`Robotics & Automation Systems Engineer`).
+  - Updated default meta description and Open Graph description to realistic portfolio summary wording.
+  - Confirmed no `HeadContent` override or shared SEO component exists beyond `wwwroot/index.html` defaults.
+  - Confirmed Twitter card title/description/image tags are not currently defined (only `twitter:card` present), so no conflicting values remained.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Home.razor`
+  - `wwwroot/index.html`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Kept page-specific titles unchanged except Home; standardized only the site-level/default share metadata and home identity title as requested.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Optional: add explicit `twitter:title`, `twitter:description`, and `twitter:image` tags if you want deterministic X/Twitter previews.
+
+## 2026-03-20
+- Task performed:
+  - Added GitHub profile link to Contact Channels section.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Contact.razor`
+- Architectural decisions:
+  - Reused existing inline-link pattern for consistency with email/LinkedIn channel rows.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - None.

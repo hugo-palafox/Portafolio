@@ -78,7 +78,7 @@ public static class SeedData
             ArchitectureSummary = "Established a traceable workflow linking mechanical design revisions, simulation scenarios, payload assumptions, and controls acceptance criteria before floor deployment.",
             Role = "Led cross-domain execution between mechanical design, robot programming, and controls to drive EOAT decisions from virtual validation to real cell readiness.",
             TechnicalChallenges = "Maintaining simulation fidelity against real payload behavior, tolerance variation, and mechanical revision drift across prototype iterations.",
-            TechStack = ["Roboguide", "SolidWorks", "TwinCAT", "Python"],
+            TechStack = ["Roboguide", "SolidWorks"],
             Outcome = "Delivered EOAT solutions into production while advancing additional prototype tooling through a structured path to commissioning.",
             Tags = ["Delivered", "Prototype", "EOAT", "Simulation-to-Reality"],
             HeroImage = "/images/projects/EOAT-1-CAD.png",
@@ -202,8 +202,28 @@ public static class SeedData
             Outcome = "Produced an architecture baseline for a productizable industrial data platform and future deployment roadmap.",
             Tags = ["Architecture", "Platform", "Product Direction", "OT-IT", "Exploratory"],
             HeroImage = "/images/projects/idh-hero.png",
+            GalleryImages = ["/images/projects/idh-hero.png"],
             Featured = true,
             SortOrder = 7
+        },
+        new()
+        {
+            Id = "proj-battery-data-platform",
+            Slug = "battery-testing-data-platform",
+            Title = "Battery Testing Data Platform (Full-Stack Industrial Workflow)",
+            Category = "Industrial Software",
+            ShortSummary = "Developed a full-stack system to process, structure, store, and visualize battery testing data across multiple test systems and facilities, including cloud-backed storage and data access.",
+            Problem = "Battery testing results were generated as raw files without structured processing, limiting traceability, accessibility, and engineering analysis.",
+            ArchitectureSummary = "Implemented a pipeline combining a Python backend service for file ingestion and processing, a .NET API for database interaction, Azure SQL for centralized data storage, OneDrive for file management, and a Blazor UI for data access and visualization.",
+            Role = "Designed and built the end-to-end system, including backend processing services, database schema, API layer, frontend application, and integration with cloud-based storage and database services.",
+            TechnicalChallenges = "Parsing and transforming raw test data, maintaining consistency across multiple test sources, managing file storage across local and cloud environments, and ensuring reliable data synchronization.",
+            TechStack = ["Delivered","Python", "C#", ".NET API", "Blazor", "SQL Server", "Azure SQL", "OneDrive"],
+            Outcome = "Enabled structured battery test data tracking, improved accessibility for engineers across locations, and established a scalable workflow integrating local systems with cloud-based storage and data services.",
+            Tags = ["Full-Stack", "Data Pipeline", "Industrial Software", "Traceability", "Multi-Site", "Cloud Integration"],
+            HeroImage = "/images/projects/battery-hero.png",
+            GalleryImages = ["/images/projects/battery-hero.png"],
+            Featured = true,
+            SortOrder = 8
         },
         new()
         {
@@ -227,7 +247,7 @@ public static class SeedData
                 "/images/projects/robot-welding-cell-4.jpg"
             ],
             Featured = true,
-            SortOrder = 8
+            SortOrder = 9
         },
         new()
         {
@@ -250,122 +270,183 @@ public static class SeedData
                 "/images/projects/iiot-dashboard-2.jpg"
             ],
             Featured = true,
-            SortOrder = 9
+            SortOrder = 10
+        },
+        new()
+        {
+            Id = "proj-leaktest-integration",
+            Slug = "leak-test-barcode-api-integration",
+            Title = "Leak Test System Integration with Barcode, Serial Control, and API",
+            Category = "Industrial Software",
+            ShortSummary = "Integrated barcode scanning, leak testing hardware, and API-driven validation into a unified desktop application for automated quality control and data reporting.",
+            Problem = "Leak testing and part validation were disconnected processes, requiring manual interaction, increasing error risk, and limiting real-time visibility.",
+            ArchitectureSummary = "Designed a desktop application integrating barcode scanner input, serial communication control for the leak tester, and API-based validation/reporting to create a closed-loop testing workflow.",
+            Role = "Led system integration, implemented hardware communication, API interaction, and application logic for automated test execution and data synchronization.",
+            TechnicalChallenges = "Reliable serial communication handling, synchronization between hardware states and application logic, and ensuring consistent API data integrity under production conditions.",
+            TechStack = ["C#", "Serial Communication", "REST API", "Barcode Scanners"],
+            Outcome = "Delivered a unified testing system that improved data accuracy, automated validation, and enabled real-time reporting of test results.",
+            Tags = ["Prototype","Integration", "Desktop Application", "Hardware Control", "API", "Quality Control"],
+            HeroImage = "/images/projects/leaktest-hero.png",
+            GalleryImages = ["/images/projects/leaktest-hero.png"],
+            Featured = true,
+            SortOrder = 11
+        },
+        new()
+        {
+            Id = "proj-scale-barcode-integration",
+            Slug = "scale-barcode-api-workflow",
+            Title = "Scale, Barcode, and API Integration for Manufacturing Workflow",
+            Category = "Industrial Software",
+            ShortSummary = "Developed a desktop workflow integrating scale measurement, barcode identification, and API validation for real-time production tracking.",
+            Problem = "Manual part identification and weight validation introduced inconsistencies and slowed production flow.",
+            ArchitectureSummary = "Built a desktop system that coordinated Ethernet barcode scanning, serial communication with a scale, and API validation to enforce process correctness and data traceability.",
+            Role = "Designed and implemented the full integration layer between devices and backend API, including workflow orchestration and operator interaction.",
+            TechnicalChallenges = "Coordinating asynchronous device communication (Ethernet + serial), ensuring deterministic workflow execution, and maintaining data consistency across API transactions.",
+            TechStack = ["C#", "REST API", "Serial Communication", "Ethernet Devices"],
+            Outcome = "Reduced operator errors, improved traceability, and enabled real-time validation of production steps.",
+            Tags = ["Delivered","Integration", "Manufacturing", "Traceability", "Desktop Application", "Automation"],
+            HeroImage = "/images/projects/scale-hero.png",
+            GalleryImages = ["/images/projects/scale-hero.png"],
+            Featured = true,
+            SortOrder = 12
         }
     ];
 
-public static readonly IReadOnlyList<SkillCategory> SkillCategories =
-[
-    new()
-    {
-        Name = "Robotics Systems",
-        Skills =
-        [
-            "Robot Cell Architecture & System Layout",
-            "Multi-Robot & AMR Integration",
-            "EOAT Design, Simulation & Prototyping",
-            "Offline Programming & Digital Twin Validation",
-            "Vision-Guided Robotics Integration",
-            "Commissioning & Cycle Optimization"
-        ]
-    },
-    new()
-    {
-        Name = "PLC & Industrial Controls",
-        Skills =
-        [
-            "State-Machine Design & Machine Sequencing",
-            "Robot–PLC Handshakes & Orchestration",
-            "Industrial I/O & Fieldbus Integration",
-            "Production Troubleshooting & Line Support",
-            "Electrical & Controls System Integration"
-        ]
-    },
-    new()
-    {
-        Name = "Industrial Networking & Protocols",
-        Skills =
-        [
-            "PLC Communication (Vendor-Agnostic)",
-            "MQTT, OPC UA, Modbus TCP, Ethernet/IP",
-            "EtherCAT, Profinet, Profibus",
-            "TCP/IP & Serial Communication",
-            "Real-Time & Asynchronous Data Systems"
-        ]
-    },
-    new()
-    {
-        Name = "Embedded & Edge Systems",
-        Skills =
-        [
-            "Embedded Linux System Deployment",
-            "Jetson SOM Provisioning & Optimization",
-            "Automated Flashing & Update Pipelines",
-            "Field Update Tools & Infrastructure",
-            "Edge Compute for Vision & Data Processing"
-        ]
-    },
-    new()
-    {
-        Name = "Machine Vision",
-        Skills =
-        [
-            "Vision-Guided Robotics Integration",
-            "Camera Calibration & Coordinate Systems",
-            "Inspection Systems & Validation Workflows",
-            "Production Vision Debugging & Optimization"
-        ]
-    },
-    new()
-    {
-        Name = "Industrial Software & IIoT",
-        Skills =
-        [
-            "Backend Services & Industrial APIs",
-            "Machine Data Collection & Traceability",
-            "KPI Dashboards & Monitoring Systems",
-            "OT ↔ IT System Integration",
-            "C#/.NET, Python, PowerShell, Bash"
-        ]
-    },
-    new()
-    {
-        Name = "AI-Assisted Industrial Systems",
-        Skills =
-        [
-            "MCP Server for TwinCAT ADS Integration",
-            "Structured PLC Data Access for AI Tools",
-            "Offline LLM Workflows for Machine Data Interpretation",
-            "Tool-Driven AI Interaction (Read, Inspect, Analyze)",
-            "AI-Assisted Diagnostics & System Understanding"
-        ]
-    },
-    new()
-    {
-        Name = "OT-IT Architecture & Systems Integration",
-        Skills =
-        [
-            "Industrial Data Platform Design",
-            "Multi-Site System Integration",
-            "Protocol Abstraction & Middleware Design",
-            "System Interface Definition",
-            "Production Diagnostics & Data Architecture"
-        ]
-    },
-    new()
-    {
-        Name = "Tools & Platforms",
-        Skills =
-        [
-            "TwinCAT 3, Siemens TIA Portal, Studio 5000",
-            "Omron, Mitsubishi, Unitronics",
-            "FANUC, ROBOGUIDE, SolidWorks",
-            "Ignition, Grafana",
-            "Linux, Git",
-            "NVIDIA Jetson, Raspberry Pi"
-        ]
-    }
-];
+    public static readonly IReadOnlyList<SkillCategory> SkillCategories =
+    [
+        new()
+        {
+            Name = "Robotics Systems",
+            Skills =
+            [
+                "Robot Cell Architecture & System Layout",
+                "Multi-Robot & AMR Integration",
+                "EOAT Design, Simulation & Prototyping",
+                "Offline Programming & Digital Twin Validation",
+                "Vision-Guided Robotics Integration",
+                "Structured & Unstructured Bin Picking",
+                "Commissioning & Cycle Optimization"
+            ]
+        },
+        new()
+        {
+            Name = "PLC, HMI & Industrial Controls",
+            Skills =
+            [
+                "PLC/HMI Programming",
+                "State-Machine Design & Machine Sequencing",
+                "Robot–PLC Handshakes & Orchestration",
+                "Industrial I/O & Fieldbus Integration",
+                "MES & Traceability Integration",
+                "Production Troubleshooting & Line Support",
+                "Electrical Design Review & Controls Integration"
+            ]
+        },
+        new()
+        {
+            Name = "Industrial Networking & Protocols",
+            Skills =
+            [
+                "PLC Communication (Vendor-Agnostic)",
+                "MQTT, OPC UA, Modbus TCP, Ethernet/IP",
+                "EtherCAT, Profinet, Profibus",
+                "REST APIs, TCP/IP & Serial Communication",
+                "Real-Time & Asynchronous Data Systems",
+                "Custom Drivers & Middleware"
+            ]
+        },
+        new()
+        {
+            Name = "Embedded & Edge Systems",
+            Skills =
+            [
+                "Embedded Linux System Deployment",
+                "Jetson SOM Provisioning & Optimization",
+                "BSP Customization & Edge Compute Optimization",
+                "Automated Flashing & Update Pipelines",
+                "Raspberry Pi Field Updater Hardware",
+                "Deployment Utilities & Field Update Tooling"
+            ]
+        },
+        new()
+        {
+            Name = "Machine Vision",
+            Skills =
+            [
+                "Vision-Guided Robotics Integration",
+                "2D/3D Vision & IRVision Workflows",
+                "Camera Calibration & Coordinate Systems",
+                "Inspection Systems & Validation Workflows",
+                "Production Vision Debugging & Optimization"
+            ]
+        },
+        new()
+        {
+            Name = "Industrial Software & IIoT",
+            Skills =
+            [
+                "C#/.NET (Blazor, ASP.NET Core API, Web API, WinForms)",
+                "Python, PowerShell, Bash",
+                "Backend Services & Industrial APIs",
+                "Machine Data Collection & Traceability",
+                "KPI Dashboards & Production Monitoring",
+                "Scalable Production Intelligence Systems",
+                "OT ↔ IT System Integration"
+            ]
+        },
+        new()
+        {
+            Name = "Databases & Data Architecture",
+            Skills =
+            [
+                "SQL Server & Azure SQL",
+                "Database Schema Design",
+                "Production Data Modeling",
+                "Multi-Site Data Integration",
+                "Traceability Data Pipelines",
+                "Operational Data Architecture"
+            ]
+        },
+        new()
+        {
+            Name = "AI-Assisted Industrial Systems",
+            Skills =
+            [
+                "MCP Server for TwinCAT ADS Integration",
+                "Structured PLC Data Access for AI Tools",
+                "Offline LLM Workflows for Machine Data Interpretation",
+                "Tool-Driven AI Interaction (Read, Inspect, Analyze)",
+                "AI-Assisted Diagnostics & System Understanding"
+            ]
+        },
+        new()
+        {
+            Name = "OT-IT Architecture & Systems Integration",
+            Skills =
+            [
+                "Industrial Data Platform Design",
+                "Edge-to-Enterprise Data Flow",
+                "Multi-Site System Integration",
+                "Protocol Abstraction & Middleware Design",
+                "System Interface Definition",
+                "Production Diagnostics & Data Architecture"
+            ]
+        },
+        new()
+        {
+            Name = "Tools & Platforms",
+            Skills =
+            [
+                "TwinCAT 3, Siemens TIA Portal, Studio 5000",
+                "Omron, Mitsubishi, Unitronics",
+                "FANUC, Epson, Universal Robots, ROBOGUIDE",
+                "Cognex, Keyence, OpenCV",
+                "Ignition, Grafana",
+                "Linux, Git",
+                "NVIDIA Jetson, Raspberry Pi"
+            ]
+        }
+    ];
 
     public static readonly IReadOnlyList<NavItem> NavItems =
     [
