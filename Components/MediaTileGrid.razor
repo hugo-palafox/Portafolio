@@ -1,11 +1,14 @@
-<div class="media-grid">
-    @foreach (var item in Items)
-    {
-        <button type="button" class="media media-tile media-tile-button" @onclick="() => OpenImage(item)" @key="item">
-            <img class="media-image" src="@item" alt="Project media image" loading="lazy" />
-        </button>
-    }
-</div>
+@if (Items.Count > 0)
+{
+    <div class="media-grid">
+        @foreach (var item in Items)
+        {
+            <button type="button" class="media media-tile media-tile-button" @onclick="() => OpenImage(item)" @key="item">
+                <img class="media-image" src="@item" alt="Project media image" loading="lazy" />
+            </button>
+        }
+    </div>
+}
 
 @if (SelectedImage is not null)
 {

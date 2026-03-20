@@ -18,26 +18,50 @@
                 <ButtonLink Href="/contact" Text="Contact" Secondary="true" />
             </div>
         </div>
-        <div class="media media-hero hero-visual">
-            <div class="hero-visual-inner">
-                <p class="hero-visual-title">System Architecture Snapshot</p>
-                <div class="hero-visual-band">
-                    <span>Cell Layer</span>
+        <section class="architecture-block" aria-label="Automation system architecture">
+            <header class="architecture-header">
+                <p class="architecture-title">Automation System Architecture</p>
+                <p class="architecture-support">Robotics, edge systems, and industrial software integrated into one production architecture.</p>
+            </header>
+            <div class="architecture-flow" role="img" aria-label="System architecture flow from cell layer to edge layer to platform layer">
+                <section class="architecture-layer-card">
+                    <h3 class="architecture-layer-title">
+                        <Icon Name="bot" Class="architecture-layer-icon" />
+                        Cell
+                    </h3>
+                    <p class="architecture-layer-summary">Robotics &middot; PLC &middot; Vision</p>
+                </section>
+                <div class="architecture-connector" aria-hidden="true">
+                    <Icon Name="arrow-right" Class="architecture-connector-icon" />
                 </div>
-                <div class="hero-visual-band">
-                    <span>Edge Layer</span>
+                <section class="architecture-layer-card">
+                    <h3 class="architecture-layer-title">
+                        <Icon Name="chip" Class="architecture-layer-icon" />
+                        Edge
+                    </h3>
+                    <p class="architecture-layer-summary">Runtime &middot; Provisioning &middot; Adapters</p>
+                </section>
+                <div class="architecture-connector" aria-hidden="true">
+                    <Icon Name="arrow-right" Class="architecture-connector-icon" />
                 </div>
-                <div class="hero-visual-band">
-                    <span>Platform Layer</span>
-                </div>
+                <section class="architecture-layer-card">
+                    <h3 class="architecture-layer-title">
+                        <Icon Name="cloud" Class="architecture-layer-icon" />
+                        Platform
+                    </h3>
+                    <p class="architecture-layer-summary">APIs &middot; Data &middot; Dashboards</p>
+                </section>
             </div>
-        </div>
+            <div class="architecture-flow-label" aria-hidden="true">
+                Cell &rarr; Edge &rarr; Platform
+            </div>
+        </section>
     </div>
     <div class="hero-divider" aria-hidden="true"></div>
 </SectionContainer>
 
 <SectionContainer>
-    <PageHeader Eyebrow="Capabilities" Title="Multidisciplinary Delivery Pillars" Description="Technical depth across robotics, controls, embedded systems, and industrial software architecture." />
+    <PageHeader Eyebrow="Capabilities" Title="Multidisciplinary Delivery Pillars" Description="System-level depth across robotics, controls, embedded systems, and industrial software." />
     <div class="grid grid-2">
         @foreach (var pillar in HomeContent.Pillars)
         {
@@ -47,7 +71,7 @@
 </SectionContainer>
 
 <SectionContainer>
-    <PageHeader Eyebrow="Featured Work" Title="Selected Engineering Case Studies" Description="Projects focused on system integration, deployment reliability, and production scalability." />
+    <PageHeader Eyebrow="Featured Work" Title="Selected Systems & Platforms" Description="Delivered systems, architecture work, and exploratory engineering across robotics, controls, embedded platforms, and industrial software." />
     <div class="grid grid-3">
         @foreach (var project in FeaturedProjects)
         {
@@ -64,8 +88,8 @@
 <SectionContainer>
     <div class="card cta-strip">
         <div>
-            <h3>Looking for engineering leadership that can bridge machine controls and software systems?</h3>
-            <p>Explore case studies, architecture decisions, and implementation outcomes across robotics, controls, and edge platforms.</p>
+            <h3>Building scalable automation systems that integrate robotics, controls, and industrial software into production environments.</h3>
+            <p>Explore delivered systems, architecture decisions, and exploratory engineering across real-world production environments.</p>
         </div>
         <div class="cta-actions">
             <ButtonLink Href="/projects" Text="View Projects" />
@@ -86,3 +110,4 @@
         FeaturedProjects = ProjectService.GetFeaturedProjects();
     }
 }
+

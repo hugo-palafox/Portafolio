@@ -7,15 +7,51 @@
         <p class="eyebrow">@Project.Category</p>
         <h3>@Project.Title</h3>
         <p>@Project.ShortSummary</p>
-        <TagList Tags="@Project.Tags" />
+        @if (StatusTags.Any())
+        {
+            <ul class="tag-list tag-list-status" aria-label="Project status and maturity">
+                @foreach (var tag in StatusTags)
+                {
+                    <li class="tag tag-status" @key="tag">@tag</li>
+                }
+            </ul>
+        }
+        @if (TechnicalTags.Any())
+        {
+            <ul class="tag-list tag-list-technical" aria-label="Technical tags">
+                @foreach (var tag in TechnicalTags)
+                {
+                    <li class="tag tag-technical" @key="tag">@tag</li>
+                }
+            </ul>
+        }
         <a class="inline-link" href="@($"/projects/{Project.Slug}")">
-            View case study
+            View Project
             <Icon Name="arrow-right" Class="icon-inline" />
         </a>
     </div>
 </article>
 
 @code {
+    private static readonly HashSet<string> MaturityTags = new(StringComparer.OrdinalIgnoreCase)
+    {
+        "Delivered",
+        "Production",
+        "Architecture",
+        "Exploratory",
+        "Prototype",
+        "Public Repo",
+        "In Progress",
+        "Platform",
+        "Product Direction"
+    };
+
+    private IReadOnlyList<string> StatusTags =>
+        Project.Tags.Where(tag => MaturityTags.Contains(tag)).ToList();
+
+    private IReadOnlyList<string> TechnicalTags =>
+        Project.Tags.Where(tag => !MaturityTags.Contains(tag)).ToList();
+
     [Parameter]
     public Project Project { get; set; } = new();
 }

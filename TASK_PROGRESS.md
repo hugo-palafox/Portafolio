@@ -36,12 +36,79 @@
   - `Portafolio/bin/`
   - `Portafolio/obj/`
   - `Portafolio/node_modules/`
+- Resumed Phase 2 portfolio content and case-study presentation work:
+  - split project card tags into maturity tags and technical tags
+  - added optional structured media blocks per project detail page
+  - refreshed case-study copy and home featured-work messaging
+  - integrated Jetson and AMR media assets
+  - removed broken project image references from seed data
+  - successful `dotnet build -c Release` validation
+- Cleaned media presentation and references:
+  - removed commented/empty gallery config in project seed data
+  - prevented rendering empty media sections on project detail pages
+  - verified no zero-byte images, no missing references, and no unused files in `wwwroot/images/projects`
+  - successful `dotnet build -c Release` validation
+- Refactored Home hero architecture snapshot into a structured 3-layer system diagram:
+  - layer panels: Cell, Edge, Platform
+  - directional flow between layers
+  - responsive layout (horizontal desktop, stacked mobile)
+  - subtle hover highlighting and icon cues
+  - successful `dotnet build -c Release` validation
+- Updated app icon wiring in `wwwroot/index.html` with explicit favicon/shortcut/apple-touch links and cache-busting query strings.
+- Refined Home architecture snapshot:
+  - updated heading and supporting line
+  - normalized 3-layer model to balanced four-item lists
+  - simplified platform labels
+  - improved card/connector visual balance for desktop and mobile
+  - successful `dotnet build -c Release` validation
+- Re-structured Home architecture snapshot layout:
+  - separated title/support text from layer-card row
+  - moved block into a dedicated outer architecture container
+  - widened/shortened and equalized layer cards
+  - centered desktop connectors and removed connector clutter on mobile
+  - successful `dotnet build -c Release` validation
+- Compacted Home architecture snapshot for hero-side support role:
+  - tightened title/support/diagram spacing
+  - reduced card height and internal density while preserving equal-height cards
+  - reduced desktop connector/gap footprint to keep flow subtle
+  - updated support sentence to concise architecture statement
+  - successful `dotnet build -c Release` validation
+- Refactored architecture snapshot placement into desktop hero right-column support panel:
+  - removed full-width/section feel
+  - enforced two-column hero hierarchy (primary text left, compact architecture panel right)
+  - constrained architecture panel width and reduced visual dominance
+  - preserved clean stacked behavior on mobile/tablet
+  - successful `dotnet build -c Release` validation
+- Tuned hero-side architecture compactness and horizontal diagram flow:
+  - strengthened desktop left/right hero ratio
+  - reduced right panel width and overall vertical density
+  - compressed card sizing/spacing and connector spacing
+  - enforced desktop `[Cell] -> [Edge] -> [Platform]` compact flow
+  - successful `dotnet build -c Release` validation
+- Refactored hero architecture panel information model:
+  - replaced detailed bullet-based layer content with concise high-level snapshot descriptors
+  - simplified block names to `Cell`, `Edge`, `Platform`
+  - reduced panel density to keep hero-side support role
+  - preserved desktop horizontal flow and mobile stacked compact blocks
+  - successful `dotnet build -c Release` validation
+- Tuned desktop hero/panel balance and readability:
+  - adjusted hero columns to `1.72fr / 1.08fr`
+  - increased architecture panel desktop max-width and breathing room
+  - increased desktop card rhythm (height, spacing, summary text, connector visibility)
+  - preserved compact concept and unchanged mobile behavior
+  - successful `dotnet build -c Release` validation
+- Hero balance refactor completed:
+  - equal desktop hero columns (`1fr / 1fr`) with stretch alignment
+  - vertical stacked architecture panel to match left-column visual mass
+  - fixed summary clipping by removing `white-space: nowrap`
+  - added compact flow label (`Cell → Edge → Platform`)
+  - successful `dotnet build -c Release` validation
 
 ## In Progress
 - None.
 
 ## Next
-- Customize placeholder portfolio content with your real case-study details and resume.
-- Phase 2: deepen projects listing/detail content and add architecture diagrams per project.
-- Optional housekeeping: manually delete `C:\Users\hugod\source\repos\Portafolio\Portafolio` folder.
-- Commit the repository hygiene cleanup so generated artifacts stop appearing in `git status`.
+- Add additional unique media assets for Data Hub case study to reduce reuse of IIoT gallery imagery.
+- Add architecture diagram assets for projects that now use the structured media block layout.
+- Review and curate final tag taxonomy for consistent portfolio storytelling across all cards.
+- Commit the current Phase 2 content + media updates.

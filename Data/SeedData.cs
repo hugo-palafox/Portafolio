@@ -8,41 +8,41 @@ public static class SeedData
     {
         Name = "Hugo Palafox",
         Headline = "Robotics & Automation Systems Engineer",
-        Subheadline = "Robotics Integration, PLC Systems, Embedded Edge Computing, and OT-IT Architecture",
-        Description = "I design and deploy industrial automation systems that integrate robotics, PLC controls, embedded edge devices, machine vision, and industrial software into scalable production-ready platforms.",
+        Subheadline = "Robotics Integration · PLC Control Systems · Embedded Edge · OT-IT Architecture",
+        Description = "I design and deploy automation systems across robotics, PLC control, embedded edge infrastructure, and industrial software—delivering production-ready systems end-to-end.",
         Pillars =
         [
             new()
             {
-                Title = "Robotics Systems & Digital Twin",
-                Description = "Robot cell architecture, simulation validation, and commissioning workflows that reduce integration risk and accelerate deployment.",
+                Title = "Robotics Integration & Cell Architecture",
+                Description = "Design robot cells, define process sequencing, and execute commissioning across machine interfaces, EOAT, and safety boundaries.",
                 IconName = "bot"
             },
             new()
             {
-                Title = "Controls & Machine Orchestration",
-                Description = "PLC state-machine design, robot-PLC coordination, and industrial I/O orchestration for reliable machine automation.",
+                Title = "PLC Control & Machine Orchestration",
+                Description = "Develop state machines, robot-PLC handshakes, and deterministic I/O orchestration for reliable cycle execution and recovery.",
                 IconName = "cpu"
             },
             new()
             {
-                Title = "Embedded Edge Infrastructure",
-                Description = "Edge compute platforms for vision processing, machine telemetry, and reproducible deployment of industrial applications.",
+                Title = "Embedded Edge Deployment",
+                Description = "Build embedded Linux deployment infrastructure for repeatable provisioning, runtime consistency, and field update reliability.",
                 IconName = "chip"
             },
             new()
             {
-                Title = "Industrial Software & OT-IT Integration",
-                Description = "Industrial software services that connect machine-level controls with production systems, analytics, and enterprise platforms.",
+                Title = "Industrial Software & OT-IT Interfaces",
+                Description = "Develop industrial software platforms that normalize machine data and expose operational context for diagnostics and integration.",
                 IconName = "network"
             }
         ],
         Metrics =
         [
-            new() { Value = "10+ Years", Label = "Industrial automation and robotics engineering" },
-            new() { Value = "40% Risk Reduction", Label = "Robot deployment risk reduced through digital-twin validation" },
-            new() { Value = "20x Faster Updates", Label = "Embedded device rollout through automated flashing workflows" },
-            new() { Value = "Multi-Domain Ownership", Label = "Robotics, PLC, embedded, vision, and software integration" }
+            new() { Value = "10+ Years", Label = "Industrial automation & robotics engineering" },
+            new() { Value = "100% Simulation Alignment", Label = "Digital twin validation matched the physical system at deployment" },
+            new() { Value = "20x Faster Updates", Label = "Embedded edge rollout accelerated through automated flashing workflows" },
+            new() { Value = "20 Machines", Label = "Multi-site IIoT deployment footprint across local and out-of-state equipment" }
         ]
     };
 
@@ -54,15 +54,14 @@ public static class SeedData
             Slug = "replenishment-robotics-system",
             Title = "Replenishment Robotics System",
             Category = "Robotics",
-            ShortSummary = "Designed a vision-guided replenishment robotics architecture integrating robot motion, PLC coordination, and dispenser-driven material flow.",
-            Problem = "Manual replenishment workflows introduced interruptions, operator dependency, and uneven refill timing across dispensing operations.",
-            ArchitectureSummary = "The system architecture combines robot task orchestration, PLC handshakes, machine state logic, and future AMR integration paths to support scalable replenishment automation.",
-            Role = "Owned robotics architecture, PLC/robot interface definitions, EOAT direction, and commissioning strategy.",
-            TechnicalChallenges = "Robot reachability, compact footprint constraints, interlock behavior during recovery, and deterministic handoff between machine states and robot workflows.",
+            ShortSummary = "Designed and actively developed replenishment robotics system that coordinates robot workflows, PLC machine states, EOAT behavior, and dispenser interaction.",
+            Problem = "Manual replenishment introduced inconsistent timing, frequent operator intervention, and avoidable machine interruptions.",
+            ArchitectureSummary = "Structured the system around robot task orchestration, PLC interlocks, machine-state handshakes, and a defined interface path for future AMR-assisted material transport.",
+            Role = "Owned robotics system boundaries, PLC-robot interface design, EOAT integration direction, and commissioning strategy across controls and software layers.",
+            TechnicalChallenges = "Deterministic handoff between machine and robot states, constrained cell geometry, recovery logic under faults, and maintaining reliable cycle behavior as workflows expanded.",
             TechStack = ["Fanuc", "TwinCAT", "C#", "Industrial Vision"],
-            Outcome = "Advanced the replenishment platform toward demonstration stage with validated robot workflows and production-oriented EOAT design.",
-            LessonsLearned = "Early alignment between robotics, controls, and software reduces integration churn as the platform scales.",
-            Tags = ["Robot Cell", "PLC Integration", "Replenishment"],
+            Outcome = "Progressed from concept into active system development with validated integration workflows and production-oriented implementation direction.",
+            Tags = ["In Progress", "Robot Cell", "PLC Integration", "Machine Integration"],
             HeroImage = "/images/projects/Replen-image1.png",
             GalleryImages = ["/images/projects/Replen-image1.png"],
             Featured = true,
@@ -74,15 +73,14 @@ public static class SeedData
             Slug = "eoat-simulation-to-reality-workflow",
             Title = "EOAT Design and Simulation-to-Reality Workflow",
             Category = "Robotics",
-            ShortSummary = "Built an EOAT validation workflow from CAD and simulation through prototyping and commissioning to reduce launch-phase iteration.",
-            Problem = "End-of-arm tooling revisions during launch drove repeated downtime and delayed production acceptance.",
-            ArchitectureSummary = "Created a traceable workflow connecting mechanical revisions, simulation scenarios, robot validation, and controls acceptance criteria.",
-            Role = "Led the interface between mechanical design, controls, and robot programming teams.",
-            TechnicalChallenges = "Maintaining simulation fidelity with real payload behavior, tolerance stack variation, and mechanical revision changes.",
+            ShortSummary = "Built a repeatable EOAT workflow from CAD and simulation through prototype validation and commissioning readiness.",
+            Problem = "Late-stage tooling changes during launch created downtime, repeated debugging cycles, and delayed production acceptance.",
+            ArchitectureSummary = "Established a traceable workflow linking mechanical design revisions, simulation scenarios, payload assumptions, and controls acceptance criteria before floor deployment.",
+            Role = "Led cross-domain execution between mechanical design, robot programming, and controls to drive EOAT decisions from virtual validation to real cell readiness.",
+            TechnicalChallenges = "Maintaining simulation fidelity against real payload behavior, tolerance variation, and mechanical revision drift across prototype iterations.",
             TechStack = ["Roboguide", "SolidWorks", "TwinCAT", "Python"],
-            Outcome = "Improved first-pass EOAT acceptance and reduced launch-phase tooling rework.",
-            LessonsLearned = "Simulation quality depends on disciplined parameter baselining, not geometry alone.",
-            Tags = ["Digital Twin", "EOAT", "Launch Readiness"],
+            Outcome = "Delivered EOAT solutions into production while advancing additional prototype tooling through a structured path to commissioning.",
+            Tags = ["Delivered", "Prototype", "EOAT", "Simulation-to-Reality"],
             HeroImage = "/images/projects/EOAT-1-CAD.png",
             GalleryImages =
             [
@@ -97,59 +95,51 @@ public static class SeedData
             Featured = true,
             SortOrder = 2
         },
-        
- new()
-{
-    Id = "proj-dispense-platform",
-    Slug = "embedded-deployment-infrastructure-automation",
-    Title = "Embedded Deployment Infrastructure for Automated Dispensing Systems",
-    Category = "Embedded Systems",
-
-    ShortSummary = "Developed automation tooling and deployment infrastructure to manage embedded system updates, diagnostics, and provisioning across automated dispensing machines.",
-
-    Problem = "Updating embedded systems and machine software across multiple production machines relied on manual procedures, creating deployment delays, operator friction, and risk of configuration drift.",
-
-    ArchitectureSummary = "Designed a unified deployment workflow combining automation scripts, operator-facing utilities, and portable update hardware to standardize embedded system provisioning and machine software updates.",
-
-    Role = "Designed and implemented automation scripts, operator tools, and a portable updater device prototype to simplify deployments and standardize field update procedures.",
-
-    TechnicalChallenges = "Coordinating updates across embedded Linux systems, PLC-connected machines, and operator workflows while maintaining reliability and minimizing machine downtime.",
-
-    TechStack = ["Python", "C#", "PowerShell", "Linux", "Jetson", "Raspberry Pi"],
-
-    Outcome = "Reduced deployment complexity and improved consistency of machine updates by introducing automated workflows and portable field update tooling.",
-
-    LessonsLearned = "Operator-friendly tools and standardized deployment processes significantly reduce operational friction in embedded industrial environments.",
-
-    Tags = ["Embedded Systems", "Deployment Automation", "Operator Tools", "Industrial Software"],
-
-    HeroImage = "/images/projects/updater.png",
-    GalleryImages =
-    [
-        "/images/projects/otd-1.jpg",
-        "/images/projects/otd-2.jpg"
-    ],
-
-    Featured = true,
-    SortOrder = 3
-},
+        new()
+        {
+            Id = "proj-dispense-platform",
+            Slug = "embedded-deployment-infrastructure-automation",
+            Title = "Embedded Deployment Infrastructure for Automated Dispensing Systems",
+            Category = "Embedded Systems",
+            ShortSummary = "Designed and built a productized deployment toolkit for embedded dispensing systems, including automation scripts, operator utilities, and portable update hardware.",
+            Problem = "Manual update procedures across production machines caused deployment delays, configuration drift, and inconsistent field execution.",
+            ArchitectureSummary = "Implemented a standardized deployment workflow combining script-driven provisioning, operator-guided tooling, and portable updater hardware to make updates repeatable on the plant floor.",
+            Role = "Owned system design and implementation of deployment automation, operator interfaces, and portable updater prototype for field-ready execution.",
+            TechnicalChallenges = "Coordinating updates across embedded Linux nodes and PLC-connected machine states while minimizing downtime and preserving rollback reliability.",
+            TechStack = ["Python", "C#", "PowerShell", "Linux", "Jetson", "Raspberry Pi"],
+            Outcome = "Standardized deployment and update operations into a reusable workflow that reduced variability and improved operational repeatability.",
+            Tags = ["Delivered", "Production", "Platform", "Embedded Systems"],
+            HeroImage = "/images/projects/updater.png",
+            GalleryImages = ["/images/projects/updater.png"],
+            Featured = true,
+            SortOrder = 3
+        },
         new()
         {
             Id = "proj-jetson",
             Slug = "jetson-som-deployment-infrastructure",
             Title = "Jetson SOM Deployment Infrastructure",
             Category = "Embedded Edge",
-            ShortSummary = "Designed deployment and update workflows for Jetson-based industrial edge systems used in vision and automation workloads.",
-            Problem = "Manual image provisioning and drifted runtime dependencies made edge deployments difficult to scale safely.",
-            ArchitectureSummary = "Standardized images, runtime dependencies, flashing workflows, and health validation paths for more repeatable deployments.",
-            Role = "Owned deployment architecture, BSP customization workflows, and edge runtime standards.",
-            TechnicalChallenges = "Version compatibility across GPU runtime stacks, network-constrained updates, and rollback reliability.",
+            ShortSummary = "Engineered deployment and update infrastructure for Jetson SOM systems used in industrial vision and automation workloads.",
+            Problem = "Manual flashing and runtime inconsistency across edge devices created rollout risk and unstable field behavior.",
+            ArchitectureSummary = "Designed a repeatable deployment architecture including standardized BSP/image baselines, automated flashing workflows, parallel provisioning pipelines, and post-flash validation to enable consistent and scalable embedded system rollouts.",
+            TechnicalChallenges = "Transforming a manual, multi-device flashing process into a scalable deployment workflow; unifying Windows/Linux tooling into a single operator interface; enabling parallel flashing and provisioning of multiple SOMs; handling partially provisioned devices with no network configuration; and meeting aggressive rollout timelines across hundreds of units.",
+            Outcome = "Enabled high-throughput deployment by flashing up to 20 devices in parallel, accelerating rollout from sequential provisioning to batch-based execution; standardized system configuration across all units; and replaced manual multi-tool workflows with a unified, operator-friendly deployment system.",
+            Role = "Owned deployment architecture, BSP/runtime consistency strategy, and rollout standards for reliable field updates.",
             TechStack = ["Jetson", "Ubuntu", "Python", "Bash", "PowerShell"],
-            Outcome = "Reduced deployment time and improved reliability of field updates across edge compute systems.",
-            LessonsLearned = "Operational discipline in release channels prevents most edge regressions.",
-            Tags = ["Edge Linux", "Deployment", "Embedded Updates"],
-            HeroImage = "/images/projects/jetson-hero.jpg",
-            GalleryImages = ["/images/projects/jetson-1.jpg", "/images/projects/jetson-2.jpg"],
+            Tags = ["Delivered", "Production", "Embedded Updates", "Edge Linux"],
+            HeroImage = "/images/projects/jetson-hero.png",
+            MediaSectionTitle = "System Diagrams & Deployment Flow",
+            MediaBlocks =
+            [
+                new()
+                {
+                    Title = "Deployment Architecture",
+                    ImagePath = "/images/projects/jetson-1.jpg",
+                    Caption = "Standardized BSP images, flash tooling, and post-flash validation are organized as one deployment architecture to keep runtime behavior consistent across every SOM."
+                }
+            ],
+            GalleryImages = ["/images/projects/jetson-1.jpg"],
             Featured = true,
             SortOrder = 4
         },
@@ -157,19 +147,24 @@ public static class SeedData
         {
             Id = "proj-amr",
             Slug = "amr-agv-material-transport-architecture",
-            Title = "AMR / AGV Material Transport Architecture",
+            Title = "AMR Bins Transport Architecture",
             Category = "System Architecture",
-            ShortSummary = "Defined early integration architecture for AMR/AGV material transport supporting replenishment and machine logistics workflows.",
-            Problem = "Material flow between mobile platforms and fixed stations created uncertainty in transport timing, handoff logic, and system scalability.",
-            ArchitectureSummary = "Developed concepts for transport orchestration, machine handoff logic, and material flow interfaces between mobile robots and fixed automation assets.",
-            Role = "Defined integration concepts between AMR fleet behavior, machine workflows, and future staging logic.",
-            TechnicalChallenges = "Docking consistency, traffic coordination, system boundaries between transport and manipulation, and scalable handoff rules.",
-            TechStack = ["MQTT", "TwinCAT", "REST APIs", "Linux"],
-            Outcome = "Established an architectural foundation for future mobile robotics integration.",
-            LessonsLearned = "Transport logic and machine handoff rules must be defined early to avoid scaling complexity later.",
-            Tags = ["AMR", "AGV", "Material Flow"],
-            HeroImage = "/images/projects/amr-hero.jpg",
-            GalleryImages = ["/images/projects/amr-1.jpg", "/images/projects/amr-2.jpg"],
+            ShortSummary = "Defined architecture for AMR material transport interfaces supporting replenishment and machine logistics workflows.",
+            Problem = "Material transfer between mobile platforms and fixed automation assets lacked clear handoff logic, timing guarantees, and scalable system boundaries.",
+            ArchitectureSummary = "Designed transport orchestration concepts, docking/handoff interface definitions, and control-boundary rules between mobile robots and machine automation.",
+            Role = "Owned architecture definition across AMR behavior interfaces, machine integration points, and future staging/dispatch structure.",
+            TechnicalChallenges = "Docking repeatability, transport-to-manipulation boundaries, traffic rule modeling, and scalable handoff contracts for future expansion.",
+            TechStack = ["MQTT", "TwinCAT", "REST APIs", "MiR250", "Omron LD", "Python", "SQL Server", "ASP.NET Core API"],
+            Outcome = "Established a practical integration architecture to guide future implementation of mobile material transport in automated cells.",
+            Tags = ["Architecture", "Exploratory", "Prototype", "AMR"],
+            HeroImage = "/images/projects/amr-hero.png",
+            GalleryImages =
+            [
+                "/images/projects/amr-1.png",
+                "/images/projects/amr-2.png",
+                "/images/projects/amr-3.png",
+                "/images/projects/amr-4.png"
+            ],
             Featured = true,
             SortOrder = 5
         },
@@ -179,17 +174,16 @@ public static class SeedData
             Slug = "plc-to-ai-machine-interface",
             Title = "PLC-to-AI Machine Interface",
             Category = "OT-IT Integration",
-            ShortSummary = "Built a proof-of-concept interface enabling AI tools to consume PLC machine states for diagnostics and engineering assistance.",
-            Problem = "AI tools lacked structured machine context, making it difficult to explore meaningful industrial use cases.",
-            ArchitectureSummary = "Designed an interface exposing machine states and controlled data access while preserving controls-layer boundaries.",
-            Role = "Defined OT-IT boundaries and implemented proof-of-concept PLC-to-AI integration behavior.",
-            TechnicalChallenges = "Latency, machine context consistency, and safe separation between controls and AI-assisted workflows.",
+            ShortSummary = "Built an exploratory proof of concept that exposes structured PLC machine context to AI tools for diagnostics and engineering assistance.",
+            Problem = "AI workflows lacked safe, structured machine-state context, limiting practical industrial diagnostics use cases.",
+            ArchitectureSummary = "Implemented a controlled interface layer that maps PLC state data into AI-consumable context while preserving controls-layer separation and OT-IT boundaries.",
+            Role = "Defined the interface model and implemented PLC-to-AI data access patterns for exploratory engineering workflows.",
+            TechnicalChallenges = "Maintaining context integrity, avoiding unsafe control-path exposure, and keeping AI interaction read-oriented within machine safety constraints.",
             TechStack = ["TwinCAT", "C#", "Python", "MCP"],
-            Outcome = "Validated a practical path for AI-assisted diagnostics using structured PLC context.",
-            LessonsLearned = "Machine context and safety boundaries must be defined clearly before AI integration becomes useful.",
-            Tags = ["AI Interface", "PLC", "Diagnostics"],
-            HeroImage = "/images/projects/plc-ai-hero.jpg",
-            GalleryImages = ["/images/projects/plc-ai-1.jpg", "/images/projects/plc-ai-2.jpg"],
+            Outcome = "Validated a credible path for AI-assisted machine diagnostics without positioning AI as direct plant-floor automation control.",
+            Tags = ["Exploratory", "Prototype", "OT-IT"],
+            HeroImage = "/images/projects/plc-ai-hero.png",
+            GalleryImages = ["/images/projects/plc-ai-hero.png"],
             Featured = true,
             SortOrder = 6
         },
@@ -199,17 +193,15 @@ public static class SeedData
             Slug = "industrial-data-hub-edge-platform",
             Title = "Industrial Data Hub Edge Platform",
             Category = "Industrial Software",
-            ShortSummary = "Designed an industrial data platform concept consolidating PLC, vision, and machine telemetry into a unified operational model.",
-            Problem = "Data fragmentation across systems blocked root-cause analysis and slowed engineering feedback loops.",
-            ArchitectureSummary = "Combined protocol adapters, normalized machine data, and application-layer services to support dashboards, diagnostics, and engineering visibility.",
-            Role = "Defined data integration patterns across controls, software, and operational reporting systems.",
-            TechnicalChallenges = "Schema evolution, protocol variation across equipment, and resilient buffering during network disruption.",
+            ShortSummary = "Defined and developed the architecture for an industrial edge data platform to unify PLC, vision, and machine telemetry into a reusable operational model.",
+            Problem = "Fragmented machine data across controls and software stacks slowed diagnostics, obscured root causes, and limited engineering feedback.",
+            ArchitectureSummary = "Defined platform architecture around protocol adapters, normalized machine-context models, edge buffering, and application interfaces for diagnostics and reporting.",
+            Role = "Owned platform direction, integration patterns, and system interface design across OT data sources and software consumers.",
+            TechnicalChallenges = "Cross-vendor protocol variation, schema evolution, and resilient data flow under intermittent plant-network conditions.",
             TechStack = ["MQTT", "C#", "SQL Server", "Grafana"],
-            Outcome = "Improved engineering observability and reduced troubleshooting cycle time in production support.",
-            LessonsLearned = "Data contracts and observability standards should be treated as first-class platform interfaces.",
-            Tags = ["Data Platform", "OT-IT", "Observability"],
-            HeroImage = "/images/projects/datahub-hero.jpg",
-            GalleryImages = ["/images/projects/datahub-1.jpg", "/images/projects/datahub-2.jpg"],
+            Outcome = "Produced an architecture baseline for a productizable industrial data platform and future deployment roadmap.",
+            Tags = ["Architecture", "Platform", "Product Direction", "OT-IT", "Exploratory"],
+            HeroImage = "/images/projects/idh-hero.png",
             Featured = true,
             SortOrder = 7
         },
@@ -219,15 +211,14 @@ public static class SeedData
             Slug = "automation-ultrasonic-welding-robot-dual-zone",
             Title = "Ultrasonic Welding Automation with 6-Axis Robot and Dual-Zone Cell",
             Category = "Robotics",
-            ShortSummary = "Led end-to-end conversion of a manual ultrasonic welding process into a fully automated dual-zone robotic system with PLC integration and staged startup.",
-            Problem = "Manual ultrasonic welding introduced throughput variability, labor dependency, and inconsistent quality under production demand.",
-            ArchitectureSummary = "Designed a dual-zone architecture with 6-axis robotic operations, PLC-coordinated sequencing, and synchronized zone handoffs to maintain continuous output.",
-            Role = "Owned concept architecture, component sourcing, robot and PLC programming, build execution, integration, and startup.",
-            TechnicalChallenges = "Balancing cycle-time targets with safe multi-zone robot coordination, commissioning without disrupting production, and ensuring stable process repeatability.",
+            ShortSummary = "Designed and deployed a dual-zone robotic ultrasonic welding cell, converting a manual process into a production automation system.",
+            Problem = "Manual ultrasonic welding constrained throughput, increased labor dependency, and introduced quality variation under production demand.",
+            ArchitectureSummary = "Implemented a dual-zone architecture with 6-axis robot operations, PLC-coordinated sequencing, and synchronized zone handoffs for continuous output.",
+            Role = "Owned end-to-end execution from concept architecture and component sourcing to robot/PLC programming, integration, and startup.",
+            TechnicalChallenges = "Meeting cycle-time targets with safe multi-zone coordination, commissioning during live production constraints, and stabilizing process repeatability.",
             TechStack = ["6-Axis Robots", "PLC Controls", "HMI", "Industrial I/O", "Ultrasonic Welding"],
-            Outcome = "Increased production efficiency, reduced labor cost, and improved process consistency with minimal deployment disruption.",
-            LessonsLearned = "Early sequencing and interface definitions between robot, PLC, and zone logic significantly reduce startup risk in retrofit automation projects.",
-            Tags = ["Robot Welding", "Dual-Zone Cell", "PLC Integration", "Automation Retrofit"],
+            Outcome = "Delivered a production cell that increased throughput, reduced labor burden, and improved weld-process consistency.",
+            Tags = ["Delivered", "Production", "Robot Welding", "PLC Integration"],
             HeroImage = "/images/projects/dual-zone-robot-welding-cell.jpg",
             GalleryImages =
             [
@@ -239,52 +230,142 @@ public static class SeedData
             SortOrder = 8
         },
         new()
-{
-    Id = "proj-iiot-dashboard",
-    Slug = "industrial-iot-dashboard-platform",
-    Title = "Industrial IoT Platform for Multi-Site PLC Data Integration",
-    Category = "Industrial Software",
-
-    ShortSummary = "Designed and deployed a full-stack IIoT platform from scratch, integrating multi-brand PLC data across distributed machines into a unified dashboard and data infrastructure.",
-
-    Problem = "Existing solutions required ~$1,000 per machine annually plus ~$8,000 upfront hardware and integration costs, limiting scalability and preventing full visibility across equipment—especially in sites with limited or no network infrastructure.",
-
-    ArchitectureSummary = "Developed an end-to-end IIoT architecture including custom PLC data drivers, edge data collection nodes, local database deployment, and centralized dashboard services. Designed flexible network solutions using mini PCs, compute sticks, and dedicated routers to support machines with limited connectivity, along with optional cloud database prototypes for remote monitoring.",
-
-    Role = "Owned the full system lifecycle including PLC driver development, data acquisition strategy, database design, network architecture, hardware selection, deployment planning, and multi-site rollout coordination.",
-
-    TechnicalChallenges = "Developing reliable data drivers across different PLC platforms, handling machines with no network access, ensuring stable data collection, designing scalable database structures, and coordinating deployments across multiple sites and teams.",
-
-    TechStack = ["C#", ".NET", "SQL Server", "Python", "TCP/Serial", "Industrial Networking", "PLC Integration"],
-
-    Outcome = "Deployed across 24 machines (20 local, 4 out-of-state), eliminating recurring subscription costs and significantly reducing hardware and integration expenses while expanding full system visibility across all equipment.",
-
-    LessonsLearned = "Owning the full stack—from PLC data acquisition to deployment infrastructure—enables scalable, cost-effective industrial systems and allows flexibility in constrained network environments.",
-
-    Tags = ["IIoT", "PLC Integration", "Edge Systems", "Industrial Software", "Multi-Site Deployment"],
-
-    HeroImage = "/images/projects/iiot-dashboard-hero.jpg",
-    GalleryImages =
-    [
-        "/images/projects/iiot-dashboard-1.jpg",
-        "/images/projects/iiot-dashboard-2.jpg"
-    ],
-
-    Featured = true,
-    SortOrder = 9
-}
+        {
+            Id = "proj-iiot-dashboard",
+            Slug = "industrial-iot-dashboard-platform",
+            Title = "Industrial IoT Platform for Multi-Site PLC Data Integration",
+            Category = "Industrial Software",
+            ShortSummary = "Built and deployed a full-stack IIoT platform from scratch to integrate multi-brand PLC data across distributed machines and sites.",
+            Problem = "The prior model cost about $1,000 per machine annually plus roughly $8,000 upfront deployment and integration, while still limiting visibility across machines with weak or missing network infrastructure.",
+            ArchitectureSummary = "Designed the complete system architecture: custom PLC drivers, edge data collection nodes, local database deployment, dashboard services, and flexible networking using mini PCs, compute sticks, and routers; also prototyped optional cloud database paths for remote monitoring.",
+            Role = "Owned full lifecycle execution including PLC interface development, data collection strategy, database architecture, network design, hardware selection, deployment planning, and multi-site rollout coordination with IT.",
+            TechnicalChallenges = "Building stable cross-vendor PLC drivers, collecting data from poorly connected machines, maintaining reliable edge-to-database flow, and scaling deployment standards across sites.",
+            TechStack = ["C#", ".NET", "SQL Server", "Python", "TCP/Serial", "Industrial Networking", "PLC Integration"],
+            Outcome = "Deployed across 24 machines (20 local, 4 out-of-state), removed recurring subscription cost dependency, and significantly reduced deployment overhead while expanding operational visibility.",
+            Tags = ["Delivered", "Production", "Multi-Site Deployment", "IIoT", "Edge Systems"],
+            HeroImage = "/images/projects/iiot-dashboard-hero.jpg",
+            GalleryImages =
+            [
+                "/images/projects/iiot-dashboard-1.jpg",
+                "/images/projects/iiot-dashboard-2.jpg"
+            ],
+            Featured = true,
+            SortOrder = 9
+        }
     ];
 
-    public static readonly IReadOnlyList<SkillCategory> SkillCategories =
-    [
-        new() { Name = "Robotics Systems", Skills = ["Robot Cell Architecture", "Offline Programming", "Digital Twin Validation", "EOAT Integration"] },
-        new() { Name = "PLC & Controls", Skills = ["TwinCAT PLC Development", "State Machines", "Robot-PLC Coordination", "Industrial I/O Integration"] },
-        new() { Name = "Embedded Systems", Skills = ["Embedded Linux", "Jetson SOM Deployment", "Edge Device Provisioning", "Firmware Update Pipelines"] },
-        new() { Name = "Industrial Software", Skills = ["C#/.NET", "REST APIs", "Service Architecture", "Machine Data Platforms"] },
-        new() { Name = "Machine Vision", Skills = ["Camera Integration", "Calibration Workflows", "Inspection Systems", "Vision-Guided Robotics"] },
-        new() { Name = "System Architecture", Skills = ["OT-IT Integration", "Automation Platforms", "Failure Mode Design", "Cross-Domain Integration"] },
-        new() { Name = "Tools & Platforms", Skills = ["TwinCAT", "Grafana", "SQL Server", "MQTT", "Linux", "Git"] }
-    ];
+public static readonly IReadOnlyList<SkillCategory> SkillCategories =
+[
+    new()
+    {
+        Name = "Robotics Systems",
+        Skills =
+        [
+            "Robot Cell Architecture & System Layout",
+            "Multi-Robot & AMR Integration",
+            "EOAT Design, Simulation & Prototyping",
+            "Offline Programming & Digital Twin Validation",
+            "Vision-Guided Robotics Integration",
+            "Commissioning & Cycle Optimization"
+        ]
+    },
+    new()
+    {
+        Name = "PLC & Industrial Controls",
+        Skills =
+        [
+            "State-Machine Design & Machine Sequencing",
+            "Robot–PLC Handshakes & Orchestration",
+            "Industrial I/O & Fieldbus Integration",
+            "Production Troubleshooting & Line Support",
+            "Electrical & Controls System Integration"
+        ]
+    },
+    new()
+    {
+        Name = "Industrial Networking & Protocols",
+        Skills =
+        [
+            "PLC Communication (Vendor-Agnostic)",
+            "MQTT, OPC UA, Modbus TCP, Ethernet/IP",
+            "EtherCAT, Profinet, Profibus",
+            "TCP/IP & Serial Communication",
+            "Real-Time & Asynchronous Data Systems"
+        ]
+    },
+    new()
+    {
+        Name = "Embedded & Edge Systems",
+        Skills =
+        [
+            "Embedded Linux System Deployment",
+            "Jetson SOM Provisioning & Optimization",
+            "Automated Flashing & Update Pipelines",
+            "Field Update Tools & Infrastructure",
+            "Edge Compute for Vision & Data Processing"
+        ]
+    },
+    new()
+    {
+        Name = "Machine Vision",
+        Skills =
+        [
+            "Vision-Guided Robotics Integration",
+            "Camera Calibration & Coordinate Systems",
+            "Inspection Systems & Validation Workflows",
+            "Production Vision Debugging & Optimization"
+        ]
+    },
+    new()
+    {
+        Name = "Industrial Software & IIoT",
+        Skills =
+        [
+            "Backend Services & Industrial APIs",
+            "Machine Data Collection & Traceability",
+            "KPI Dashboards & Monitoring Systems",
+            "OT ↔ IT System Integration",
+            "C#/.NET, Python, PowerShell, Bash"
+        ]
+    },
+    new()
+    {
+        Name = "AI-Assisted Industrial Systems",
+        Skills =
+        [
+            "MCP Server for TwinCAT ADS Integration",
+            "Structured PLC Data Access for AI Tools",
+            "Offline LLM Workflows for Machine Data Interpretation",
+            "Tool-Driven AI Interaction (Read, Inspect, Analyze)",
+            "AI-Assisted Diagnostics & System Understanding"
+        ]
+    },
+    new()
+    {
+        Name = "OT-IT Architecture & Systems Integration",
+        Skills =
+        [
+            "Industrial Data Platform Design",
+            "Multi-Site System Integration",
+            "Protocol Abstraction & Middleware Design",
+            "System Interface Definition",
+            "Production Diagnostics & Data Architecture"
+        ]
+    },
+    new()
+    {
+        Name = "Tools & Platforms",
+        Skills =
+        [
+            "TwinCAT 3, Siemens TIA Portal, Studio 5000",
+            "Omron, Mitsubishi, Unitronics",
+            "FANUC, ROBOGUIDE, SolidWorks",
+            "Ignition, Grafana",
+            "Linux, Git",
+            "NVIDIA Jetson, Raspberry Pi"
+        ]
+    }
+];
 
     public static readonly IReadOnlyList<NavItem> NavItems =
     [

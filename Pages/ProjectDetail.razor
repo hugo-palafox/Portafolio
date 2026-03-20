@@ -36,10 +36,29 @@ else
                 <TagList Tags="@Project.TechStack" />
                 <h2>Outcome / Impact</h2>
                 <p>@Project.Outcome</p>
-                <h2>Media</h2>
-                <MediaTileGrid Items="@Project.GalleryImages" />
-                <h2>Lessons Learned</h2>
-                <p>@Project.LessonsLearned</p>
+                @if (HasMedia)
+                {
+                    <h2>@Project.MediaSectionTitle</h2>
+                    @if (Project.MediaBlocks.Count > 0)
+                    {
+                        <div class="system-media-grid">
+                            @foreach (var block in Project.MediaBlocks)
+                            {
+                                <section class="system-media-block" @key="block.Title">
+                                    <h3 class="system-media-title">@block.Title</h3>
+                                    <div class="media media-16x9 system-media-frame">
+                                        <img class="media-image" src="@block.ImagePath" alt="@block.Title" loading="lazy" />
+                                    </div>
+                                    <p class="system-media-caption">@block.Caption</p>
+                                </section>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <MediaTileGrid Items="@Project.GalleryImages" />
+                    }
+                }
             </article>
         </div>
     </SectionContainer>
@@ -50,6 +69,7 @@ else
     public string? Slug { get; set; }
 
     private Project? Project { get; set; }
+    private bool HasMedia => Project is not null && (Project.MediaBlocks.Count > 0 || Project.GalleryImages.Count > 0);
 
     protected override void OnParametersSet()
     {

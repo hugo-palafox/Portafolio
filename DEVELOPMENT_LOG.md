@@ -232,3 +232,272 @@
   - None.
 - Next recommended steps:
   - Add per-image captions/alt metadata in the project model if you want richer case-study storytelling.
+
+## 2026-03-19
+- Task performed:
+  - Resumed Phase 2 portfolio implementation and stabilized in-progress case-study/content updates.
+  - Extended project model and detail page to support optional structured media blocks with per-block title/caption.
+  - Updated project card rendering to separate maturity/status tags from technical tags.
+  - Refined home featured-work messaging and case-study narratives in seed data.
+  - Cleaned seed media references to remove broken image paths and align with currently available assets.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Models/Project.cs`
+  - `Data/SeedData.cs`
+  - `Components/ProjectCard.razor`
+  - `Pages/Home.razor`
+  - `Pages/ProjectDetail.razor`
+  - `wwwroot/css/app.css`
+  - `TASK_PROGRESS.md`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Added `ProjectMediaBlock` and `MediaBlocks` as an optional extension to preserve compatibility with existing gallery-based projects.
+  - Kept project card tag rendering rule-based (status vs technical) using a centralized maturity tag set in the component.
+  - Chose to reuse existing valid images for PLC-to-AI and Data Hub entries to prevent broken media while awaiting dedicated assets.
+- Deviations from plan:
+  - PLC-to-AI and Data Hub are temporarily using shared IIoT imagery instead of unique project-specific media.
+- Next recommended steps:
+  - Replace temporary shared imagery with dedicated PLC-to-AI and Data Hub visuals.
+  - Add diagram assets to projects using structured media blocks.
+  - Commit the current Phase 2 content/model/UI updates.
+
+## 2026-03-19
+- Task performed:
+  - Cleaned project media configuration to remove empty media sections in case-study pages.
+  - Replaced commented `GalleryImages` placeholder in PLC-to-AI project with a concrete image path.
+  - Updated project detail rendering to show the media heading/grid only when media exists.
+  - Added an empty-list guard in `MediaTileGrid` to prevent rendering blank media containers.
+  - Verified image integrity and usage:
+    - no zero-byte image files found
+    - no missing referenced images
+    - no unused files in `wwwroot/images/projects`
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Data/SeedData.cs`
+  - `Pages/ProjectDetail.razor`
+  - `Components/MediaTileGrid.razor`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Media rendering is now explicitly conditional at both page and component levels to avoid empty UI blocks when project media is absent.
+- Deviations from plan:
+  - No file deletions were required because all project image files are non-empty and referenced.
+- Next recommended steps:
+  - Keep adding project-specific media; the current guards will safely handle partial galleries during ongoing content updates.
+
+## 2026-03-19
+- Task performed:
+  - Refactored Home hero "System Architecture Snapshot" from text bands into a portfolio-grade 3-layer visual diagram.
+  - Implemented explicit `Cell Layer -> Edge Layer -> Platform Layer` flow with directional connectors.
+  - Added concise per-layer item lists and lightweight icon accents.
+  - Applied responsive behavior:
+    - desktop: horizontal three-panel flow
+    - mobile: stacked vertical flow
+  - Added subtle hover highlight for each layer panel.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Home.razor`
+  - `Components/Icon.razor`
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Kept implementation CSS-first within existing design tokens to preserve visual consistency and avoid extra dependencies.
+  - Added `cloud` icon support to shared `Icon` component for reusable layer semantics.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Optionally convert the three layer definitions into typed seed data if you want this hero diagram to be data-driven.
+
+## 2026-03-19
+- Task performed:
+  - Resolved stale/default favicon behavior by expanding icon link declarations in `index.html`.
+  - Added explicit `icon`, `shortcut icon`, and `apple-touch-icon` entries with cache-busting query suffixes.
+- Files created or modified:
+  - `wwwroot/index.html`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Kept icon wiring static in `index.html` to ensure deterministic behavior across desktop/mobile browsers without adding runtime logic.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - If icon cache persists in a specific browser profile, clear site data once for localhost and reload.
+
+## 2026-03-19
+- Task performed:
+  - Refined Home architecture snapshot content and visual balance without changing overall hero structure.
+  - Updated section title to `Automation System Architecture`.
+  - Added supporting line describing the integration model.
+  - Normalized layer content density to four concise items per layer.
+  - Simplified platform labels (`APIs & Services`, `Data Model`, `Dashboards`, `Diagnostics`).
+  - Tuned card sizing/padding/connector spacing for more even desktop balance and clean mobile stacking.
+  - Kept subtle dark-theme styling and restrained hover behavior.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Home.razor`
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Preserved existing 3-layer model and responsive direction while improving readability and consistency through CSS-only adjustments.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - If desired, tune only micro-typography (item font-size and line-height) after browser review on your primary screen size.
+
+## 2026-03-19
+- Task performed:
+  - Re-structured the Home architecture snapshot to resolve layout/spacing imbalance.
+  - Moved title + supporting sentence into a clean header region above the diagram row.
+  - Introduced a dedicated outer architecture container (separate from ratio-bound media styling).
+  - Rebuilt diagram as a balanced 3-card horizontal flow with centered connectors on desktop.
+  - Tuned card proportions to be wider and slightly shorter with equalized heights and cleaner spacing.
+  - Kept mobile behavior clean by stacking cards and hiding connectors.
+  - Preserved dark, minimal, engineering-focused design language.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Home.razor`
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Avoided `media/media-hero` aspect-ratio constraints for this block to allow a true diagram composition.
+  - Kept connector rendering desktop-only to prevent mobile clutter and maintain readability.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Perform visual review at your primary desktop width and one mobile width to confirm final spacing preference.
+
+## 2026-03-19
+- Task performed:
+  - Applied compactness refinement to keep the architecture diagram as a hero-side snapshot instead of a feature-sized section.
+  - Tightened outer block padding and internal spacing between title, support text, and diagram row.
+  - Updated support sentence to the concise version requested.
+  - Reduced layer card height and internal spacing while preserving equal-height alignment.
+  - Reduced connector width/gap so desktop flow stays horizontal but visually lighter.
+  - Preserved mobile stacking behavior with clean readability.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Home.razor`
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Kept the existing architecture block structure and tuned only proportions/spacing to avoid regressions in hero composition.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - If needed, fine-tune only one variable at a time (`.architecture-layer-card` min-height or `.architecture-block` padding) after browser review.
+
+## 2026-03-19
+- Task performed:
+  - Refactored architecture snapshot placement so it functions as a compact right-side hero support panel on desktop.
+  - Removed full-width behavior and constrained architecture panel width within hero two-column layout.
+  - Kept hero text as primary left column and architecture panel as secondary right column.
+  - Reduced panel and card proportions for a less section-like footprint.
+  - Kept connectors centered and subtle while preserving clean mobile stacking behavior.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Switched architecture flow to compact stacked cards within the right panel to maintain readability at 35-40% hero width.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Review on 1280px and 1440px widths; if needed, adjust only `.hero-grid` ratio or `.architecture-block` `max-width`.
+
+## 2026-03-19
+- Task performed:
+  - Tuned hero composition for stronger left-content dominance and lighter right-panel footprint.
+  - Increased desktop hero ratio toward left copy and reduced right-panel max width.
+  - Converted desktop architecture panel to tighter horizontal `[Cell] -> [Edge] -> [Platform]` flow.
+  - Reduced card heights, inner spacing, connector spacing, and connector size to reduce vertical heaviness.
+  - Kept content unchanged and preserved mobile stacked behavior.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Used desktop-only two-column list layout inside cards to preserve all required content while reducing panel height.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - If text appears too small on your display, increase only desktop `.architecture-layer-items li` font-size by one step.
+
+## 2026-03-19
+- Task performed:
+  - Refactored hero-side architecture panel information model from detailed multi-item lists to a high-level system snapshot.
+  - Replaced layer labels with concise block names: `Cell`, `Edge`, `Platform`.
+  - Replaced bullet/list content with compact summary lines:
+    - `Robotics · PLC · Vision`
+    - `Runtime · Provisioning · Adapters`
+    - `APIs · Data · Dashboards`
+  - Reduced panel/card density to reinforce "supporting graphic" role in hero.
+  - Preserved subtle connector flow on desktop and clean stacked compact blocks on mobile.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/Home.razor`
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Kept detailed architecture depth out of hero panel and reserved detailed breakdown for project pages.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - If needed, adjust only `.architecture-layer-summary` font-size by a small step after visual review.
+
+## 2026-03-19
+- Task performed:
+  - Rebalanced desktop hero proportions and architecture panel readability without changing concept or content model.
+  - Increased desktop right-column share while preserving left-column dominance.
+  - Enlarged desktop panel max width and spacing rhythm for less compressed card reading.
+  - Increased desktop card height/padding, summary text size, and connector presence for clearer horizontal flow.
+  - Left mobile/tablet behavior unchanged.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `wwwroot/css/app.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Scoped all changes to desktop breakpoint to improve first-view balance without affecting compact mobile behavior.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Visual-check desktop at 1280px and 1440px; ratio and panel width are now tuned for both.
+
+## 2026-03-19
+- Task performed:
+  - Hero balance refactor — equal columns, vertical stack architecture panel, fixed clipping bug.
+- Files created or modified:
+  - `Pages/Home.razor`
+  - `wwwroot/css/app.css`
+- Architectural decisions:
+  - Switched from 1.72fr/1.08fr asymmetric hero to 1fr/1fr equal stretch columns.
+  - Architecture panel now uses vertical card stack to match left column visual mass.
+  - Removed `white-space: nowrap` which was causing layer summary text to overflow/clip.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Confirm final desktop visual balance at 980px, 1280px, and 1440px widths.
+
+## 2026-03-19
+- Task performed:
+  - Fixed ambiguous Blazor routing causing runtime exception for duplicate `/skills` route.
+- Files created or modified:
+  - `Pages/About.razor`
+- Architectural decisions:
+  - Restored unique page routing by setting About route to `/about` and keeping Skills at `/skills`.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - If needed, restore About-specific page content (current About page body mirrors Skills content).
+
+## 2026-03-19
+- Task performed:
+  - Restored About page content so it no longer duplicates Skills page content.
+  - Applied user-provided About narrative structure and copy under `/about`.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Pages/About.razor`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Kept existing `SectionContainer` + `PageHeader` + `card prose` composition for consistency with site page patterns.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Optionally add a concise “Core Domains” list if you want About to be more scannable on mobile.
