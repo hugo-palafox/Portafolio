@@ -1,145 +1,26 @@
 # TASK_PROGRESS
 
 ## Planned
-- Create project-local skill pack for UI quality, maintainability, and traceability.
-- Wire automatic skill application rules in project `AGENTS.md`.
-- Add development breadcrumb files required by traceability skill.
-- Start Phase 1 implementation (scaffold, layout, home, reusable components).
+- Continue content hardening for portfolio storytelling quality and technical credibility.
+- Improve project media/diagram completeness and card taxonomy consistency.
 
 ## Completed
-- Created 10 project-local skills under `.codex/skills/`.
-- Added project-level `AGENTS.md` with:
-  - mandatory baseline skills
-  - task-type auto-selection rules
-  - portfolio content/style constraints
-  - precedence rules
-  - traceability requirements
-- Added `DEVELOPMENT_LOG.md` and first session entry.
-- Added this `TASK_PROGRESS.md` tracker.
-- Implemented Phase 1 app foundation in `Portafolio/`:
-  - expanded models and seed data
-  - read-only services
-  - reusable components
-  - layout and navigation
-  - homepage and route pages
-  - project detail route with required section placeholders
-  - dark theme design system and media ratio stability
-  - resume download path and placeholder PDF
-  - minimal Tailwind pipeline (`npm install`, `npm run build:css`)
-  - successful `dotnet build`
-- Flattened active project to repository root path and excluded nested duplicate folder from compilation.
-- Added repository `.gitignore` for .NET/Node/IDE generated artifacts.
-- Untracked previously committed generated files from:
-  - `bin/`
-  - `obj/`
-  - `node_modules/`
-  - `Portafolio/bin/`
-  - `Portafolio/obj/`
-  - `Portafolio/node_modules/`
-- Resumed Phase 2 portfolio content and case-study presentation work:
-  - split project card tags into maturity tags and technical tags
-  - added optional structured media blocks per project detail page
-  - refreshed case-study copy and home featured-work messaging
-  - integrated Jetson and AMR media assets
-  - removed broken project image references from seed data
-  - successful `dotnet build -c Release` validation
-- Cleaned media presentation and references:
-  - removed commented/empty gallery config in project seed data
-  - prevented rendering empty media sections on project detail pages
-  - verified no zero-byte images, no missing references, and no unused files in `wwwroot/images/projects`
-  - successful `dotnet build -c Release` validation
-- Refactored Home hero architecture snapshot into a structured 3-layer system diagram:
-  - layer panels: Cell, Edge, Platform
-  - directional flow between layers
-  - responsive layout (horizontal desktop, stacked mobile)
-  - subtle hover highlighting and icon cues
-  - successful `dotnet build -c Release` validation
-- Updated app icon wiring in `wwwroot/index.html` with explicit favicon/shortcut/apple-touch links and cache-busting query strings.
-- Refined Home architecture snapshot:
-  - updated heading and supporting line
-  - normalized 3-layer model to balanced four-item lists
-  - simplified platform labels
-  - improved card/connector visual balance for desktop and mobile
-  - successful `dotnet build -c Release` validation
-- Re-structured Home architecture snapshot layout:
-  - separated title/support text from layer-card row
-  - moved block into a dedicated outer architecture container
-  - widened/shortened and equalized layer cards
-  - centered desktop connectors and removed connector clutter on mobile
-  - successful `dotnet build -c Release` validation
-- Compacted Home architecture snapshot for hero-side support role:
-  - tightened title/support/diagram spacing
-  - reduced card height and internal density while preserving equal-height cards
-  - reduced desktop connector/gap footprint to keep flow subtle
-  - updated support sentence to concise architecture statement
-  - successful `dotnet build -c Release` validation
-- Refactored architecture snapshot placement into desktop hero right-column support panel:
-  - removed full-width/section feel
-  - enforced two-column hero hierarchy (primary text left, compact architecture panel right)
-  - constrained architecture panel width and reduced visual dominance
-  - preserved clean stacked behavior on mobile/tablet
-  - successful `dotnet build -c Release` validation
-- Tuned hero-side architecture compactness and horizontal diagram flow:
-  - strengthened desktop left/right hero ratio
-  - reduced right panel width and overall vertical density
-  - compressed card sizing/spacing and connector spacing
-  - enforced desktop `[Cell] -> [Edge] -> [Platform]` compact flow
-  - successful `dotnet build -c Release` validation
-- Refactored hero architecture panel information model:
-  - replaced detailed bullet-based layer content with concise high-level snapshot descriptors
-  - simplified block names to `Cell`, `Edge`, `Platform`
-  - reduced panel density to keep hero-side support role
-  - preserved desktop horizontal flow and mobile stacked compact blocks
-  - successful `dotnet build -c Release` validation
-- Tuned desktop hero/panel balance and readability:
-  - adjusted hero columns to `1.72fr / 1.08fr`
-  - increased architecture panel desktop max-width and breathing room
-  - increased desktop card rhythm (height, spacing, summary text, connector visibility)
-  - preserved compact concept and unchanged mobile behavior
-  - successful `dotnet build -c Release` validation
-- Hero balance refactor completed:
-  - equal desktop hero columns (`1fr / 1fr`) with stretch alignment
-  - vertical stacked architecture panel to match left-column visual mass
-  - fixed summary clipping by removing `white-space: nowrap`
-  - added compact flow label (`Cell → Edge → Platform`)
-  - successful `dotnet build -c Release` validation
+- Implemented portfolio app foundation (models, services, pages, reusable components).
+- Established project-local skill system and agent rules in `AGENTS.md`.
+- Implemented Home hero architecture snapshot and iterative mobile/desktop layout polish.
+- Refactored Contact page into a professional inquiry surface (frontend-only, no delivery backend).
+- Refactored Resume page into preview-and-download experience with inline PDF and fallback link.
+- Added and integrated additional project assets and project entries.
+- Fixed route ambiguity (`/about` vs `/skills`) and Home featured-project visibility via `Featured` flags.
+- Audited and grounded share metadata/title positioning in `wwwroot/index.html` and Home page title.
+- Refined mobile drawer into a proper slide-over sheet with overlay, close affordance, and keyboard close support.
+- Repeatedly validated with `dotnet build Portafolio.sln -c Release` after each major change.
 
 ## In Progress
 - None.
 
 ## Next
-- Add additional unique media assets for Data Hub case study to reduce reuse of IIoT gallery imagery.
-- Add architecture diagram assets for projects that now use the structured media block layout.
-- Review and curate final tag taxonomy for consistent portfolio storytelling across all cards.
-- Commit the current Phase 2 content + media updates.
-- Refactored Resume page into preview-and-download experience:
-  - updated resume page header copy to `Resume Preview & Download`
-  - removed redundant summary/timeline narrative sections
-  - added compact CTA row (`Download Resume`, `Contact`)
-  - added inline PDF preview for `/assets/resume/Hugo-Palafox-Resume.pdf`
-  - added always-visible fallback note with direct PDF link
-  - added minimal resume-specific responsive styles
-  - successful `dotnet build -c Release` validation
-- Refined Resume page layout to improve PDF preview prominence:
-  - added internal preview heading and support copy
-  - introduced centered preview stage wrapper
-  - substantially increased preview height for better document-first hierarchy
-  - kept existing CTA behavior, PDF path, and fallback note semantics
-  - successful `dotnet build -c Release` validation
-- Refactored Contact page into a professional inquiry surface:
-  - updated header copy for professional automation/systems conversation context
-  - removed placeholder form wording
-  - kept clear contact channels with consistent LinkedIn URL and text
-  - added structured inquiry form with optional company field
-  - added disabled non-live submit CTA (`Send Message (Coming soon)`) and professional response note
-  - preserved frontend-only behavior (no backend/email integration)
-  - added minimal contact-specific readability styles
-  - successful `dotnet build -c Release` validation
-- Fixed Home visibility for two new industrial software projects by setting their `Featured` flags to `true` in seed data.
-- Validated with successful `dotnet build -c Release`.
-- Audited and corrected default share-preview metadata to grounded positioning:
-  - removed "Industrial Systems Architect" from default/share title contexts
-  - set site-level and Home title to `Hugo Palafox | Robotics & Automation Systems Engineer`
-  - standardized default/meta Open Graph description to realistic portfolio wording
-  - build validated with `dotnet build -c Release`
-- Added GitHub channel to Contact page (`github.com/hugo-palafox`) and validated build success.
+- Add unique media for projects still using minimal/placeholder imagery.
+- Add architecture diagrams for project detail pages where architecture is core to the narrative.
+- Finalize project tag taxonomy for consistent card readability.
+- Keep `DEVELOPMENT_LOG.md` append-only; use `HANDOFF.md` + this file for fast agent onboarding.

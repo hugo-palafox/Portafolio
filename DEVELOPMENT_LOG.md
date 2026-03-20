@@ -613,3 +613,41 @@
   - None.
 - Next recommended steps:
   - None.
+
+## 2026-03-20
+- Task performed:
+  - Refined mobile navigation drawer from partial panel feel into a polished slide-over sheet presentation.
+  - Added drawer header with brand label and explicit close button.
+  - Improved overlay separation (darker overlay + subtle blur) and ensured overlay tap closes drawer.
+  - Updated drawer sizing to intentional mobile sheet dimensions (`82vw`, `max-width: 320px`).
+  - Improved link row hierarchy, spacing rhythm, icon alignment, and tap target size.
+  - Added keyboard close support (Escape) for drawer/overlay interactions.
+  - Preserved desktop navigation behavior with no desktop layout regression.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `Layouts/MainLayout.razor`
+  - `Layouts/MainLayout.razor.css`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Kept existing open/close interaction model and state flow; refined presentation and accessibility only.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Optional: add body-scroll lock while drawer is open if mobile page-scroll bleed is observed in testing.
+
+## 2026-03-20
+- Task performed:
+  - Performed handoff-readiness cleanup to reduce context/token cost for future agents.
+  - Added concise `HANDOFF.md` with architecture map, behavior contracts, high-impact files, and startup commands.
+  - Rewrote `TASK_PROGRESS.md` into a compact, decision-useful tracker and removed duplicated/corrupted log fragments.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `HANDOFF.md`
+  - `TASK_PROGRESS.md`
+  - `DEVELOPMENT_LOG.md`
+- Architectural decisions:
+  - Preserved detailed session history in `DEVELOPMENT_LOG.md`; optimized `TASK_PROGRESS.md` for rapid operational context only.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Keep `HANDOFF.md` updated when changing routing, data source contracts, or key UI interaction patterns.

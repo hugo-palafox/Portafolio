@@ -23,21 +23,27 @@
         </div>
     </header>
 
-    <div class="drawer-overlay @(IsMobileNavOpen ? "open" : string.Empty)" @onclick="CloseNav"></div>
-    <aside class="mobile-drawer @(IsMobileNavOpen ? "open" : string.Empty)">
-        <nav aria-label="Mobile navigation">
-            <ul class="drawer-links">
-                @foreach (var item in NavItems)
-                {
-                    <li @key="item.Href">
-                        <NavLink class="drawer-link" href="@item.Href" Match="@(item.Href == "/" ? NavLinkMatch.All : NavLinkMatch.Prefix)" @onclick="CloseNav">
-                            <Icon Name="@item.IconName" Class="drawer-icon" />
-                            <span>@item.Title</span>
-                        </NavLink>
-                    </li>
-                }
-            </ul>
-        </nav>
+    <div class="drawer-overlay @(IsMobileNavOpen ? "open" : string.Empty)" @onclick="CloseNav" @onkeydown="HandleDrawerKeyDown" tabindex="0" aria-label="Close navigation overlay"></div>
+    <aside class="mobile-drawer @(IsMobileNavOpen ? "open" : string.Empty)" @onkeydown="HandleDrawerKeyDown" tabindex="-1">
+        <div class="drawer-header">
+            <a class="drawer-brand" href="/" @onclick="CloseNav">Hugo Palafox</a>
+            <button type="button" class="drawer-close-button" @onclick="CloseNav" aria-label="Close navigation menu">Close</button>
+        </div>
+        <div class="drawer-body">
+            <nav aria-label="Mobile navigation">
+                <ul class="drawer-links">
+                    @foreach (var item in NavItems)
+                    {
+                        <li @key="item.Href">
+                            <NavLink class="drawer-link" href="@item.Href" Match="@(item.Href == "/" ? NavLinkMatch.All : NavLinkMatch.Prefix)" @onclick="CloseNav">
+                                <Icon Name="@item.IconName" Class="drawer-icon" />
+                                <span>@item.Title</span>
+                            </NavLink>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <main class="content-shell">
@@ -63,5 +69,13 @@
     private void CloseNav()
     {
         IsMobileNavOpen = false;
+    }
+
+    private void HandleDrawerKeyDown(KeyboardEventArgs eventArgs)
+    {
+        if (eventArgs.Key.Equals("Escape", StringComparison.Ordinal))
+        {
+            CloseNav();
+        }
     }
 }
