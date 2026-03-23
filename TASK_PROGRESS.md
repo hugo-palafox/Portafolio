@@ -18,6 +18,8 @@
 - Added a GitHub-ready `README.md` with setup, structure, and deployment notes.
 - Added README badges, screenshot preview section, and GitHub Pages deployment instructions.
 - Added ready-to-use GitHub Actions workflow for GitHub Pages deployment.
+- Added `GITHUB_PAGES_DEPLOYMENT_RUNBOOK.md` with repeatable deployment steps and troubleshooting.
+- Added root `CNAME` file for custom domain `hugodavidpalafox.com`.
 
 ## In Progress
 - None.

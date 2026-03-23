@@ -685,3 +685,32 @@
   - None.
 - Next recommended steps:
   - Add a license file if you want the license badge to resolve to a concrete SPDX license in repository metadata.
+
+## 2026-03-23
+- Task performed:
+  - Added a dedicated deployment runbook (`GITHUB_PAGES_DEPLOYMENT_RUNBOOK.md`) with a concise overview of completed deployment work and repeatable future deployment instructions.
+  - Documented one-time setup, routine deploy steps, manual rerun flow, and troubleshooting for the known GitHub Pages 404 deployment error path.
+- Files created or modified:
+  - `GITHUB_PAGES_DEPLOYMENT_RUNBOOK.md`
+  - `DEVELOPMENT_LOG.md`
+  - `TASK_PROGRESS.md`
+- Architectural decisions:
+  - Kept deployment procedure documentation separate from README to preserve a concise public-facing README and provide a focused operational runbook.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Optional: add a short link to `GITHUB_PAGES_DEPLOYMENT_RUNBOOK.md` inside `README.md` for discoverability.
+
+## 2026-03-23
+- Task performed:
+  - Added root `CNAME` file for custom domain mapping to `hugodavidpalafox.com`.
+- Files created or modified:
+  - `CNAME`
+  - `DEVELOPMENT_LOG.md`
+  - `TASK_PROGRESS.md`
+- Architectural decisions:
+  - Kept custom domain declaration in root `CNAME` for GitHub Pages compatibility with automated deploy workflow.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Ensure DNS records for `hugodavidpalafox.com` are configured to GitHub Pages and verify HTTPS status in repository Pages settings.
