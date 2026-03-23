@@ -30,9 +30,13 @@ jobs:
       - name: Publish Blazor app
         run: dotnet publish Portafolio.csproj -c Release -o release
 
-      - name: Configure base path for GitHub Pages project site
+      - name: Keep root base path for custom domain deployment
         run: |
-          sed -i 's|<base href="/" />|<base href="/Portafolio/" />|g' release/wwwroot/index.html
+          grep -q '<base href="/" />' release/wwwroot/index.html
+
+      - name: Include custom domain mapping
+        run: |
+          if [ -f CNAME ]; then cp CNAME release/wwwroot/CNAME; fi
 
       - name: Enable SPA fallback for deep links
         run: cp release/wwwroot/index.html release/wwwroot/404.html

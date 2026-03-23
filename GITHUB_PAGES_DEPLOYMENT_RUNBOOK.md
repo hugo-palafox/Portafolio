@@ -2,18 +2,19 @@
 
 ## Overview: What Was Done
 
-This repository was configured to deploy automatically to GitHub Pages using GitHub Actions.
+This repository is configured to deploy automatically to GitHub Pages using GitHub Actions.
 
 Implemented items:
 - Added deployment workflow at `.github/workflows/deploy-github-pages.yml`.
 - Configured workflow to:
   - Build and publish Blazor WebAssembly (`dotnet publish -c Release`).
-  - Rewrite `<base href="/">` to `<base href="/Portafolio/">` for project-site routing.
+  - Keep `<base href="/" />` for root-domain routing.
+  - Copy root `CNAME` into published output.
   - Copy `index.html` to `404.html` for SPA deep-link fallback.
   - Deploy using official GitHub Pages actions.
 - Enabled GitHub Pages in repository settings with source set to `GitHub Actions`.
 - Deployed successfully to:
-  - `https://hugo-palafox.github.io/Portafolio/`
+  - `https://hugodavidpalafox.com/`
 
 ---
 
@@ -51,7 +52,7 @@ git push origin main
 3. Open GitHub `Actions` tab.
 4. Wait for workflow **Build & Deploy** to complete.
 5. Validate site:
-   - `https://hugo-palafox.github.io/Portafolio/`
+   - `https://hugodavidpalafox.com/`
 
 If needed, manually trigger:
 - `Actions > Build & Deploy > Run workflow`.
@@ -88,19 +89,19 @@ Cause:
 - Incorrect base path.
 
 Fix:
-- For project site (`/<repo>/`), keep:
-  - `<base href="/Portafolio/">`
-- For root domain (`https://<user>.github.io/`) or custom domain:
-  - change workflow replacement target to `<base href="/">`.
+- For root domain/custom domain, keep:
+  - `<base href="/">`
+- For project site (`/<repo>/`):
+  - set `<base href="/<repo>/">` during deployment.
 
 ---
 
 ## Changing Hosting Target Later
 
-If moving from project URL (`/Portafolio/`) to root domain/custom domain:
+If moving from root domain/custom domain to project URL (`/<repo>/`):
 
-1. Update base-path rewrite in workflow:
-   - from `/Portafolio/` to `/`
+1. Update deployment base path:
+   - from `/` to `/<repo>/`
 2. Commit and push.
 3. Re-run workflow.
 

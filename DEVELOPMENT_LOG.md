@@ -714,3 +714,23 @@
   - None.
 - Next recommended steps:
   - Ensure DNS records for `hugodavidpalafox.com` are configured to GitHub Pages and verify HTTPS status in repository Pages settings.
+
+## 2026-03-23
+- Task performed:
+  - Fixed root-domain deployment issue by removing stale `/Portafolio/` base-path rewrite logic from GitHub Pages workflow.
+  - Ensured deploy artifact keeps root base path (`<base href="/" />`) and includes root `CNAME` during publish deployment.
+  - Updated deployment documentation to reflect custom-domain root hosting instead of repo-subpath hosting.
+  - Validated with successful `dotnet build Portafolio.sln -c Release`.
+- Files created or modified:
+  - `.github/workflows/deploy-github-pages.yml`
+  - `README.md`
+  - `GITHUB_PAGES_DEPLOYMENT_RUNBOOK.md`
+  - `DEVELOPMENT_LOG.md`
+  - `TASK_PROGRESS.md`
+- Architectural decisions:
+  - Root-domain hosting is now the canonical deployment mode; workflow no longer mutates `index.html` base path to repo subpath.
+  - `CNAME` is copied into published `wwwroot` artifact to keep custom-domain mapping explicit in deployment output.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Push changes and re-run the `Build & Deploy` workflow; then hard-refresh `https://hugodavidpalafox.com/` and verify no `404` for `_framework/*`, css, or icon assets.

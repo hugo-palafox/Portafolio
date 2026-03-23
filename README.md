@@ -103,8 +103,8 @@ This includes:
 This repository now includes a ready-to-use workflow:
 - `.github/workflows/deploy-github-pages.yml`
 
-It is configured for **GitHub Pages project hosting** at:
-- `https://hugo-palafox.github.io/Portafolio/`
+It is configured for **custom-domain root hosting** at:
+- `https://hugodavidpalafox.com/`
 
 ### One-time GitHub setup
 
@@ -115,13 +115,14 @@ It is configured for **GitHub Pages project hosting** at:
 ### How it works
 
 - Builds and publishes the Blazor app in Release mode.
-- Rewrites `<base href="/">` to `<base href="/Portafolio/">` for project-site routing.
+- Keeps `<base href="/" />` for root-domain routing.
+- Copies root `CNAME` into publish output.
 - Copies `index.html` to `404.html` so deep links work on GitHub Pages.
 - Deploys the published `wwwroot` artifact with official `actions/deploy-pages`.
 
 ### If your hosting target changes
 
-- For `https://<user>.github.io/` root hosting or a custom domain, update the workflow base path replacement from `/Portafolio/` to `/`.
+- For repo-subpath hosting (`https://<user>.github.io/<repo>/`), set `<base href="/<repo>/" />` during deployment.
 
 ## Repository Notes
 

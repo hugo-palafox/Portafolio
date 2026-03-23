@@ -20,6 +20,7 @@
 - Added ready-to-use GitHub Actions workflow for GitHub Pages deployment.
 - Added `GITHUB_PAGES_DEPLOYMENT_RUNBOOK.md` with repeatable deployment steps and troubleshooting.
 - Added root `CNAME` file for custom domain `hugodavidpalafox.com`.
+- Removed stale `/Portafolio/` deploy rewrite and aligned GitHub Pages workflow/docs for custom-domain root hosting.
 
 ## In Progress
 - None.
