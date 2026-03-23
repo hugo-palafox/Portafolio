@@ -15,6 +15,9 @@
 - Audited and grounded share metadata/title positioning in `wwwroot/index.html` and Home page title.
 - Refined mobile drawer into a proper slide-over sheet with overlay, close affordance, and keyboard close support.
 - Repeatedly validated with `dotnet build Portafolio.sln -c Release` after each major change.
+- Added a GitHub-ready `README.md` with setup, structure, and deployment notes.
+- Added README badges, screenshot preview section, and GitHub Pages deployment instructions.
+- Added ready-to-use GitHub Actions workflow for GitHub Pages deployment.
 
 ## In Progress
 - None.
@@ -23,4 +26,5 @@
 - Add unique media for projects still using minimal/placeholder imagery.
 - Add architecture diagrams for project detail pages where architecture is core to the narrative.
 - Finalize project tag taxonomy for consistent card readability.
+- Add a `LICENSE` file if a concrete open-source license is desired in badge/repo metadata.
 - Keep `DEVELOPMENT_LOG.md` append-only; use `HANDOFF.md` + this file for fast agent onboarding.

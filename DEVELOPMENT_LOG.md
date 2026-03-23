@@ -651,3 +651,37 @@
   - None.
 - Next recommended steps:
   - Keep `HANDOFF.md` updated when changing routing, data source contracts, or key UI interaction patterns.
+
+## 2026-03-23
+- Task performed:
+  - Created a GitHub-ready `README.md` with project overview, stack, local setup, build/publish commands, project structure, content-management notes, and deployment guidance.
+  - Kept instructions aligned with current repository behavior (`dotnet run`, Tailwind build/watch scripts, launch URLs from `launchSettings.json`).
+- Files created or modified:
+  - `README.md`
+  - `DEVELOPMENT_LOG.md`
+  - `TASK_PROGRESS.md`
+- Architectural decisions:
+  - Documented content ownership in `Data/SeedData.cs` as the canonical source for portfolio content.
+  - Explicitly noted that deployment workflow automation is not yet defined in-repo.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Add a deployment workflow (for example, GitHub Actions) once target hosting is finalized.
+
+## 2026-03-23
+- Task performed:
+  - Enhanced `README.md` with GitHub badges (build status, .NET version, license), a preview screenshot section, and explicit GitHub Pages deployment instructions.
+  - Added ready-to-use GitHub Actions workflow for GitHub Pages project hosting with automatic publish/deploy on `main`.
+  - Included base-path rewrite for `/Portafolio/` and SPA deep-link fallback generation (`404.html`).
+- Files created or modified:
+  - `README.md`
+  - `.github/workflows/deploy-github-pages.yml`
+  - `DEVELOPMENT_LOG.md`
+  - `TASK_PROGRESS.md`
+- Architectural decisions:
+  - Standardized deployment target to GitHub Pages project URL (`/Portafolio/`) in CI workflow.
+  - Used official GitHub Pages actions (`upload-pages-artifact`, `deploy-pages`) for maintainable deployment path.
+- Deviations from plan:
+  - None.
+- Next recommended steps:
+  - Add a license file if you want the license badge to resolve to a concrete SPDX license in repository metadata.
